@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="搭建博客, Asgard">
+    <meta name="keywords" content="搭建博客, 博客,github,hexo,matery">
     <meta name="description" content="搭建博客笔记在B站看到github+hexo搭建个人博客的视频，一时间来了兴趣开始着手搭建。此文章用于记录自己搭建的过程，也算是个小教程，内容集合了一些自己的理解和各路大神（太多，就不一一说了）的讲解。一方面方便自己以后回过头来查看。另一方">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -180,7 +180,7 @@
         <div class="logo-name">Asgard</div>
         <div class="logo-desc">
             
-            Never really desperate, only the lost of the soul.
+            个人学习网站
             
         </div>
     </div>
@@ -628,12 +628,12 @@ https://YourGithubName.github.io/`                                      部署�
 <pre><code>git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia     通过克隆方式将yilia主题下到themes主题下的yilia目录下
 
 修改hexo根目录下的 _config.yml 文件 ：定位到 theme: yilia</code></pre><h3 id="添加404页面"><a href="#添加404页面" class="headerlink" title="添加404页面"></a>添加404页面</h3><p>原来的主题缺少404页面，我们可以自做。  </p>
-<p>首先在/source/目录下新建一个<strong>404页面.md</strong>，可以用命令新建，也可以到_posts文件夹右键新建</p>
-<pre><code>title: 404页面
+<p>首先在/source/目录下新建一个<strong>404.md</strong>，可以用命令新建，也可以到_posts文件夹右键新建</p>
+<pre><code>title: 404
 date: &#39;&#39;
 type: &quot;404&quot;
 layout: &quot;404&quot;
-description: &quot;我崩溃了！真的！我都不知道你到底想找什么！！！&quot;</code></pre><p>然后在/themes/matery/layout/目录下新建<strong>404页面.ejs</strong>文件</p>
+description: &quot;我崩溃了！真的！我都不知道你到底想找什么！！！&quot;</code></pre><p>然后在/themes/matery/layout/目录下新建<strong>404.ejs</strong>文件</p>
 <pre><code>&lt;style type=&quot;text/css&quot;&gt; 
     /* don&#39;t remove. */ 
     .about-cover { 
