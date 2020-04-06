@@ -689,10 +689,75 @@ description: &quot;我崩溃了！真的！我都不知道你到底想找什么�
     $(&#39;.bg-cover&#39;).css(&#39;background-image&#39;, &#39;url(/medias/banner/&#39; + new Date().getDay() + &#39;.jpg)&#39;); 
 &lt;/script&gt;
 </code></pre><h3 id="添加live2D"><a href="#添加live2D" class="headerlink" title="添加live2D"></a>添加live2D</h3><p>大多数博客都有的看板娘<strong>(老婆)</strong>，最激动人心的环节来了~  </p>
-<p><a href="https://github.com/EYHN/hexo-helper-live2d/blob/HEAD/README.zh-CN.md" target="_blank" rel="noopener">我懒得写了，自己看</a></p>
+<p>Live2D是一种应用于电子游戏的绘图渲染技术，由日本Cybernoids公司开发，通过一系列的连续图像和人物建模来生成一种类似二维图像的三维模型，换句话说就是2D的素材实现一定程度的3D效果，但只能是一定程度3D，因为Live 2D人物无法大幅度转身。</p>
+<p><a href="https://github.com/EYHN/hexo-helper-live2d/blob/master/README.zh-CN.md" target="_blank" rel="noopener">详细过程</a></p>
+<p>首先检查博客主目录下的<code>package.json</code>是否有<code>&quot;hexo-helper-live2d&quot;: &quot;^3.1.1&quot;</code>依赖。<br>有的话可以先进行卸载：<code>npm uninstall hexo-helper-live2d</code>  </p>
+<p>安装依赖：<code>npm install --save hexo-helper-live2d</code>  </p>
+<p>成功了之后可以看到<code>blog</code>目录的<code>node_modules/</code>下有个<code>live2d-widget</code>目录，这是动画的主配置：</p>
+<p>下载model文件，示例：<br><code>npm install live2d-widget-model-shizuku</code>,添加模型随自己挑选</p>
+<p><a href="https://github.com/xiazeyu/live2d-widget-models" target="_blank" rel="noopener">模型</a></p>
+<p>安装完成可以在<code>node_modules/</code>下看到<code>live2d-widget-model-shizuku</code>文件夹</p>
+<p>最后，添加live2d看板娘到hexo:  </p>
+<p>配置Hexo的<code>主_config.yml</code>或者使用的主题的<code>_config.yml</code><br>添加以下代码到配置文件中：</p>
+<pre><code># live2d
+live2d:
+  userConfig: 
+  enable: true
+  scriptFrom: local
+  # pluginRootPath: live2dw/
+  # pluginJsPath: lib/
+  pluginModelPath: assets/
+  tagMode: false
+  debug: false
+  model:
+    use: live2d-widget-model-shizuku
+  display:
+    position: right
+    width: 200
+    height: 600
+    hOffset: 0   
+    vOffset: -198  
+  mobile:
+    show: true
+  react:
+    opacity: 1
+  dialog:
+    enable: true
+    hitokoto: true</code></pre><p>使用<code>hexo g</code>生成文件，<code>hexo s</code>即可在本地查看效果</p>
 <h3 id="添加评论插件"><a href="#添加评论插件" class="headerlink" title="添加评论插件"></a>添加评论插件</h3><p>这个主题自带了gittalk、gitment、valine等评论插件，所以我们只需要去主题下的配置文件修改对应插件参数就行了。</p>
+<p>注意：<strong>Valine</strong>评论模块，在blog目录下config.yml中。<code>appId</code>和<code>appKey</code>字段是需要自己注册登录<code>leancloud</code>官网，创建应用然后获取</p>
+<p><a href="https://www.leancloud.cn/" target="_blank" rel="noopener">leanCloud网址</a></p>
+<h3 id="添加博客动态标签"><a href="#添加博客动态标签" class="headerlink" title="添加博客动态标签"></a>添加博客动态标签</h3><p>原理就是给博客增加一个事件判断，如下图所示：</p>
+<p>路径：<code>themes/matery/layout/layout.ejs</code>，在任意位置添加如下代码：</p>
+<pre><code>&lt;script type=&quot;text/javascript&quot;&gt;
+            var OriginTitile = document.title,
+                st;
+            document.addEventListener(&quot;visibilitychange&quot;, function () {
+                document.hidden ? (document.title = &quot;✪ ω ✪你想捉迷藏吗&quot;, clearTimeout(st)) : (document.title =
+                    &quot;ヾ(•ω•`)o找到你了！&quot;, st = setTimeout(function () {
+                        document.title = OriginTitile
+                    }, 3e3))
+            })
+&lt;/script&gt;</code></pre><hr>
+<h2 id="三-博客优化"><a href="#三-博客优化" class="headerlink" title="三. 博客优化"></a>三. 博客优化</h2><h3 id="npm速度优化"><a href="#npm速度优化" class="headerlink" title="npm速度优化"></a>npm速度优化</h3><p>玩hexo的，肯定经常使用npm，但是npm的下载速度太慢。</p>
+<p>前面我们提到过一次<strong>cnpm</strong>，下面介绍一下</p>
+<ul>
+<li>阿里的淘宝团队在国内做了个跟npm仓库一样的镜像叫cnpm。</li>
+<li>淘宝镜像与npm官方包的同步频率目前为10分钟一次，来保证尽量与官方服务同步。</li>
+<li>二者可以说是一样，可以说没有差别。</li>
+</ul>
+<p>安装cnpm命令：<br><code>npm install -g cnpm --registry=http://registry.npm.taobao.org</code></p>
+<p>安装后，测试是否安装成功：<code>cnpm -v</code></p>
+<p>成功后，以后都可以使用 <code>cnpm</code> 代替 <code>npm</code> 来执行命令</p>
+<h3 id="全站CDN加速"><a href="#全站CDN加速" class="headerlink" title="全站CDN加速"></a>全站CDN加速</h3><p>CDN的全称是<strong>Content Delivery Network</strong>，即内容分发网络。</p>
+<p>CDN是构建在网络之上的内容分发网络，依靠部署在各地的边缘服务器，通过中心平台的负载均衡、内容分发、调度等功能模块，使用户就近获取所需内容，降低网络拥塞，提高用户访问响应速度和命中率。</p>
+<p>CDN的关键技术主要有内容存储和分发技术。</p>
+<p>由于github使用国外服务器，放在Github的资源在国内加载速度比较慢，因此需要使用CDN加速来优化网站打开速度，jsDelivr + Github便是免费且好用的CDN，非常适合博客网站使用。</p>
+<p>用法：<br><code>https://cdn.jsdelivr.net/gh/你的用户名/你的仓库名@发布的版本号/文件路径</code></p>
+<p>还可以配合PicGo图床上传工具的自定义域名前缀来上传图片，使用极其方便。</p>
 <hr>
-<h2 id="三-博客优化"><a href="#三-博客优化" class="headerlink" title="三. 博客优化"></a>三. 博客优化</h2><p>to be continue….</p>
+<p>暂且写到这里，就此收键。</p>
+<p>To be continue…..</p>
 
             </div>
             <hr/>
@@ -1595,6 +1660,17 @@ $(function () {
     
     <script async src="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/libs/others/busuanzi.pure.mini.js"></script>
     
+
+<script type="text/javascript">
+            var OriginTitile = document.title,
+                st;
+            document.addEventListener("visibilitychange", function () {
+                document.hidden ? (document.title = "✪ ω ✪你想捉迷藏吗", clearTimeout(st)) : (document.title =
+                    "ヾ(•ω•`)o找到你了！", st = setTimeout(function () {
+                        document.title = OriginTitile
+                    }, 3e3))
+            })
+        </script>
 
     
 

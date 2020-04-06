@@ -910,6 +910,17 @@ $(function () {
     <script async src="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/libs/others/busuanzi.pure.mini.js"></script>
     
 
+<script type="text/javascript">
+            var OriginTitile = document.title,
+                st;
+            document.addEventListener("visibilitychange", function () {
+                document.hidden ? (document.title = "✪ ω ✪你想捉迷藏吗", clearTimeout(st)) : (document.title =
+                    "ヾ(•ω•`)o找到你了！", st = setTimeout(function () {
+                        document.title = OriginTitile
+                    }, 3e3))
+            })
+        </script>
+
     
 
     
