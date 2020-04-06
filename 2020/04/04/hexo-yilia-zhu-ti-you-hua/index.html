@@ -410,6 +410,19 @@
 </header>
 
     
+<script src="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('你不知道密码，你乱输个什么锤子！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
 
 
 
@@ -1623,6 +1636,6 @@ $(function () {
     <script src="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/libs/instantpage/instantpage.js" type="module"></script>
     
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"position":"left","width":300,"height":600,"hOffset":-20,"vOffset":-200},"mobile":{"show":true},"react":{"opacity":1},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/"});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"userConfig":null,"pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":200,"height":600,"hOffset":0,"vOffset":-198},"mobile":{"show":true},"react":{"opacity":1},"dialog":{"enable":true,"hitokoto":true},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/"});</script></body>
 
 </html>
