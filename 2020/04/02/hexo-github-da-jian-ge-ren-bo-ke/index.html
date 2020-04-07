@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, 博客,github,hexo,matery">
+    <meta name="keywords" content="搭建博客, 博客,github,hexo,matery">
     <meta name="description" content="个人学习网站">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,8 +16,8 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | Asgard</title>
-    <link rel="icon" type="image/png" href="/medias/favicon.png">
+    <title>搭建博客 | Asgard</title>
+    <link rel="icon" type="image/png" href="favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
     <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
@@ -39,7 +39,7 @@
             <div class="brand-logo">
                 <a href="/" class="waves-effect waves-light">
                     
-                    <img src="logo.png" class="logo-img" alt="LOGO">
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
                     <span class="logo-span">Asgard</span>
                 </a>
@@ -115,7 +115,7 @@
 
     <div class="mobile-head bg-color">
         
-        <img src="logo.png" class="logo-img circle responsive-img">
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">Asgard</div>
         <div class="logo-desc">
@@ -262,7 +262,7 @@
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
 <script>
     (function() {
-        let pwd = '';
+        let pwd = '07596606691a';
         if (pwd && pwd.length > 0) {
             if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
                 alert('你不知道密码，你乱输个什么锤子！');
@@ -275,12 +275,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/source/images/xxx.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">搭建博客</h1>
                 </div>
             </div>
         </div>
@@ -403,12 +403,29 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Typora/">
+                                <span class="chip bg-color">Typora</span>
+                            </a>
+                        
+                            <a href="/tags/Markdown/">
+                                <span class="chip bg-color">Markdown</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Markdown/" class="post-category">
+                                Markdown
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -417,7 +434,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-04-04
+                    2020-04-02
                 </div>
                 
 
@@ -426,14 +443,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    73
+                    3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    11 分
                 </div>
                 
 
@@ -449,16 +466,192 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre>
+                <h1 id="搭建博客笔记"><a href="#搭建博客笔记" class="headerlink" title="搭建博客笔记"></a>搭建博客笔记</h1><p>在B站看到github+hexo搭建个人博客的视频，一时间来了兴趣开始着手搭建。<br>此文章用于记录自己搭建的过程，也算是个小教程，内容集合了一些自己的理解和各路大神（太多，就不一一说了）的讲解。一方面方便自己以后回过头来查看。<br>另一方面想见证自己学习的过程。  </p>
+<p><strong>GitHub page平台</strong>: GitHub是一个面向开源及私有软件项目的托管平台，因为只支持git作为唯一的版本库格式进行托管，故名GitHub.<br><strong>Github</strong>: <a href="https://github.com/" target="_blank" rel="noopener">网址</a>  </p>
+<p><strong>Hexo</strong>: hexo是一个高效的静态网站生成框架，基于Node.js，快速，简单且功能强大，是搭建博客的首选框架。通过Hexo，你可以直接使用Markdown语法来撰写博客。<br><strong>Hexo</strong>: <a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">网址</a></p>
+<p>使用github平台上托管博客。我们可以放心写作，又不需要自购服务器域名那样定期维护，hexo作为一个快速简洁的博客框架，用它来搭建博客会非常轻松。</p>
+<h2 id="一-搭建博客"><a href="#一-搭建博客" class="headerlink" title="一. 搭建博客"></a>一. 搭建博客</h2><h3 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h3><p>由于Hexo是基于node.js编写的，所以要先安装node.js和里面的npm工具<strong>（Node.js打包管理工具）</strong>。<br><strong>Node.js</strong>: Node是一个让 JavaScript 运行在服务端的开发平台，它让 JavaScript 成为与PHP、Python、Perl、Ruby 等服务端语言平起平坐的<strong>脚本语言</strong>。  </p>
+<p><strong>Node</strong>: <a href="http://nodejs.cn/download/" target="_blank" rel="noopener">下载地址</a></p>
+<h3 id="下载git"><a href="#下载git" class="headerlink" title="下载git"></a>下载git</h3><p>为了把本地的博客文件上传到github上面去，需要工具Git。  </p>
+<p><strong>Git</strong>: Git是一个开源的分布式版本控制系统，可以有效、高速地处理从很小到非常大的项目版本管理。分布式相比于集中式的最大区别在于开发者可以提交到本地，每个开发者通过克隆（git clone），在本地机器上拷贝一个完整的Git仓库。</p>
+<p><strong>git</strong>: <a href="https://git-scm.com/downloads" target="_blank" rel="noopener">下载地址</a>  </p>
+<p>下载后直接使用<strong>Git Bash</strong>输入命令,不需要用到cmd</p>
+<h3 id="Git-Bash输入指令"><a href="#Git-Bash输入指令" class="headerlink" title="Git Bash输入指令"></a>Git Bash输入指令</h3><p>想对hexo 指令做更深入的了解，可以访问<a href="https://hexo.io/zh-cn/docs/commands.html" target="_blank" rel="noopener">hexo指令网址</a></p>
+<p>按顺序输入以后命令</p>
 <a id="more"></a>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server</code></pre>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate</code></pre>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy</code></pre>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+
+<pre><code>node -v           查看node版本，检查是否安装成功
+npm -v            查看npm版本，检查是否安装成功
+npm install -g cnpm --registry=http://registry.npm.taobao.org           安装淘宝的cnpm 管理器，阿里的国内镜像
+cnpm -v           查看cnpm版本，检查是否安装成功
+cnpm install -g hexo-cli           安装hexo博客框架
+hexo -v           查看hexo版本，检查是否安装成功
+mkdir blog        创建blog（名字自取）目录，存放博客文件
+cd blog           进入blog目录，此后对博客的修改基于blog目录
+hexo init         当前文件夹初始化-生成博客。</code></pre><p>新建完成后，我们的blog文件夹就有以下文件：</p>
+<ul>
+<li>node_modules: 依赖包，node.js各种库的目录</li>
+<li>public：生成的网页文件目录</li>
+<li>scaffolds：新文章和新页面的初始模板</li>
+<li>source：用来存放你的文章和图片等资源文件<ul>
+<li>_posts</li>
+<li>assets</li>
+</ul>
+</li>
+<li>themes：存放主题</li>
+<li>_config.yml: 博客的配置文件<strong>（非常重要）</strong>  </li>
+</ul>
+<p>下面流程中我们在blog常用到的简单命令：  </p>
+<ul>
+<li><strong>hexo clean</strong>（清除缓存文件 (db.json) 和已生成的静态文件 (public)。<br>在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。）</li>
+<li><strong>hexo generate</strong>（可以简写为<strong>hexo g</strong>，生成静态文件）</li>
+<li><strong>hexo server</strong>（可以简写为<strong>hexo s</strong>，启动服务器。默认情况下，访问网址为：<a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> ）</li>
+<li><strong>hexo deploy</strong>（可以简写为：<strong>hexo d</strong>，部署网站）</li>
+</ul>
+<p>了解完后，接着输入以下命令</p>
+<pre><code>hexo server           
+http://localhost:4000/           默认本地访问地址
+hexo n &quot;我的第一篇文章&quot;           （名字可自取），创建新文章 
+返回blog目录
+hexo clean
+hexo g</code></pre><p>打开Github，右上角+新建一个项目仓库New repository，项目命名为：<strong>Github自身用户名.github.io</strong><br>只有这样设置，将博客部署到github才会被识别</p>
+<pre><code>cnpm install --save hexo-deployer-git         在blog目录下安装git部署插件</code></pre><h3 id="将hexo部署到GitHub"><a href="#将hexo部署到GitHub" class="headerlink" title="将hexo部署到GitHub"></a>将hexo部署到GitHub</h3><p>打开博客根目录下的_config.yml文件<strong>（博客的配置文件）</strong>，在这里你可以修改与博客配置相关的各种信息。  </p>
+<p>修改博客最后一行</p>
+<pre><code>deploy:
+  type: git
+  repo: https://github.com/YourGithubName/YourGithubName.github.io.git
+  branch: master</code></pre><p>repository改为自己github项目地址，就是部署时告诉工具，将生成网页通过git方式上传到你对应的链接仓库中。</p>
+<pre><code>hexo clean
+hexo g
+hexo d                                                                  注意deploy时可能要你输入username和password。
+https://YourGithubName.github.io/`                                      部署成功后，访问这个地址可以查看博客</code></pre><hr>
+<h2 id="二-定制博客"><a href="#二-定制博客" class="headerlink" title="二. 定制博客"></a>二. 定制博客</h2><p>建议了解上方<strong>blog文件目录</strong>和<strong>hexo基本配置</strong>  </p>
+<p>hexo配置文档：<a href="https://hexo.io/zh-cn/docs/configuration" target="_blank" rel="noopener">网址</a></p>
+<h3 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h3><p>hexo默认主题是lanscape，不过太显单调了。  </p>
+<p>我们可以到github或是Hexo上下载自己喜欢的主题。</p>
+<p>这里我推荐两个，一个是yilia，另一个则是matery。后续有较好的主题，我会继续推荐 </p>
+<p><strong>yilia</strong>：<a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="noopener">下载地址</a><br><strong>matery</strong>: <a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank" rel="noopener">下载地址</a><br><strong>next</strong>: <a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">github排名第一主题，我在这里放出来</a></p>
+<p>大家可以根据<strong>创作者放出的教程</strong>一步步安装主题，下面是一个yilia安装的示范：  </p>
+<pre><code>git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia     通过克隆方式将yilia主题下到themes主题下的yilia目录下
+
+修改hexo根目录下的 _config.yml 文件 ：定位到 theme: yilia</code></pre><h3 id="添加404页面"><a href="#添加404页面" class="headerlink" title="添加404页面"></a>添加404页面</h3><p>原来的主题缺少404页面，我们可以自做。  </p>
+<p>首先在/source/目录下新建一个<strong>404.md</strong>，可以用命令新建，也可以到_posts文件夹右键新建</p>
+<pre><code>title: 404
+date: &#39;&#39;
+type: &quot;404&quot;
+layout: &quot;404&quot;
+description: &quot;我崩溃了！真的！我都不知道你到底想找什么！！！&quot;</code></pre><p>然后在/themes/matery/layout/目录下新建<strong>404.ejs</strong>文件</p>
+<pre><code>&lt;style type=&quot;text/css&quot;&gt; 
+    /* don&#39;t remove. */ 
+    .about-cover { 
+        height: 75vh; 
+    } 
+&lt;/style&gt; 
+
+&lt;div class=&quot;bg-cover pd-header about-cover&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt; 
+        &lt;div class=&quot;row&quot;&gt; 
+            &lt;div class=&quot;col s10 offset-s1 m8 offset-m2 l8 offset-l2&quot;&gt; 
+                &lt;div class=&quot;brand&quot;&gt;
+                    &lt;div class=&quot;title center-align&quot;&gt; 
+                        404 
+                    &lt;/div&gt; 
+                    &lt;div class=&quot;description center-align&quot;&gt; 
+                        &lt;%= page.description %&gt; 
+                    &lt;/div&gt; 
+                &lt;/div&gt; 
+            &lt;/div&gt; 
+        &lt;/div&gt; 
+    &lt;/div&gt; 
+&lt;/div&gt; 
+
+&lt;script&gt; 
+    // 每天切换 banner 图. Switch banner image every day. 
+    $(&#39;.bg-cover&#39;).css(&#39;background-image&#39;, &#39;url(/medias/banner/&#39; + new Date().getDay() + &#39;.jpg)&#39;); 
+&lt;/script&gt;
+</code></pre><h3 id="添加live2D"><a href="#添加live2D" class="headerlink" title="添加live2D"></a>添加live2D</h3><p>大多数博客都有的看板娘<strong>(老婆)</strong>，最激动人心的环节来了~  </p>
+<p>Live2D是一种应用于电子游戏的绘图渲染技术，由日本Cybernoids公司开发，通过一系列的连续图像和人物建模来生成一种类似二维图像的三维模型，换句话说就是2D的素材实现一定程度的3D效果，但只能是一定程度3D，因为Live 2D人物无法大幅度转身。</p>
+<p><a href="https://github.com/EYHN/hexo-helper-live2d/blob/master/README.zh-CN.md" target="_blank" rel="noopener">详细过程</a></p>
+<p>首先检查博客主目录下的<code>package.json</code>是否有<code>&quot;hexo-helper-live2d&quot;: &quot;^3.1.1&quot;</code>依赖。<br>有的话可以先进行卸载：<code>npm uninstall hexo-helper-live2d</code>  </p>
+<p>安装依赖：<code>npm install --save hexo-helper-live2d</code>  </p>
+<p>成功了之后可以看到<code>blog</code>目录的<code>node_modules/</code>下有个<code>live2d-widget</code>目录，这是动画的主配置：</p>
+<p>下载model文件，示例：<br><code>npm install live2d-widget-model-shizuku</code>,添加模型随自己挑选</p>
+<p><a href="https://github.com/xiazeyu/live2d-widget-models" target="_blank" rel="noopener">模型</a></p>
+<p>安装完成可以在<code>node_modules/</code>下看到<code>live2d-widget-model-shizuku</code>文件夹</p>
+<p>最后，添加live2d看板娘到hexo:  </p>
+<p>配置Hexo的<code>主_config.yml</code>或者使用的主题的<code>_config.yml</code><br>添加以下代码到配置文件中：</p>
+<pre><code># live2d
+live2d:
+  userConfig: 
+  enable: true
+  scriptFrom: local
+  # pluginRootPath: live2dw/
+  # pluginJsPath: lib/
+  pluginModelPath: assets/
+  tagMode: false
+  debug: false
+  model:
+    use: live2d-widget-model-shizuku
+  display:
+    position: right
+    width: 200
+    height: 600
+    hOffset: 0   
+    vOffset: -198  
+  mobile:
+    show: true
+  react:
+    opacity: 1
+  dialog:
+    enable: true
+    hitokoto: true</code></pre><p>使用<code>hexo g</code>生成文件，<code>hexo s</code>即可在本地查看效果</p>
+<h3 id="添加评论插件"><a href="#添加评论插件" class="headerlink" title="添加评论插件"></a>添加评论插件</h3><p>这个主题自带了gittalk、gitment、valine等评论插件，所以我们只需要去主题下的配置文件修改对应插件参数就行了。</p>
+<p>注意：<strong>Valine</strong>评论模块，在blog目录下config.yml中。<code>appId</code>和<code>appKey</code>字段是需要自己注册登录<code>leancloud</code>官网，创建应用然后获取</p>
+<p><a href="https://www.leancloud.cn/" target="_blank" rel="noopener">leanCloud网址</a></p>
+<h3 id="添加博客动态标签"><a href="#添加博客动态标签" class="headerlink" title="添加博客动态标签"></a>添加博客动态标签</h3><p>原理就是给博客增加一个事件判断，如下图所示：</p>
+<p>路径：<code>themes/matery/layout/layout.ejs</code>，在任意位置添加如下代码：</p>
+<pre><code>&lt;script type=&quot;text/javascript&quot;&gt;
+            var OriginTitile = document.title,
+                st;
+            document.addEventListener(&quot;visibilitychange&quot;, function () {
+                document.hidden ? (document.title = &quot;✪ ω ✪你想捉迷藏吗&quot;, clearTimeout(st)) : (document.title =
+                    &quot;ヾ(•ω•`)o找到你了！&quot;, st = setTimeout(function () {
+                        document.title = OriginTitile
+                    }, 3e3))
+            })
+&lt;/script&gt;</code></pre><hr>
+<h2 id="三-博客优化"><a href="#三-博客优化" class="headerlink" title="三. 博客优化"></a>三. 博客优化</h2><h3 id="npm速度优化"><a href="#npm速度优化" class="headerlink" title="npm速度优化"></a>npm速度优化</h3><p>玩hexo的，肯定经常使用npm，但是npm的下载速度太慢。</p>
+<p>前面我们提到过一次<strong>cnpm</strong>，下面介绍一下</p>
+<ul>
+<li>阿里的淘宝团队在国内做了个跟npm仓库一样的镜像叫cnpm。</li>
+<li>淘宝镜像与npm官方包的同步频率目前为10分钟一次，来保证尽量与官方服务同步。</li>
+<li>二者可以说是一样，可以说没有差别。</li>
+</ul>
+<p>安装cnpm命令：<br><code>npm install -g cnpm --registry=http://registry.npm.taobao.org</code></p>
+<p>安装后，测试是否安装成功：<code>cnpm -v</code></p>
+<p>成功后，以后都可以使用 <code>cnpm</code> 代替 <code>npm</code> 来执行命令</p>
+<h3 id="全站CDN加速"><a href="#全站CDN加速" class="headerlink" title="全站CDN加速"></a>全站CDN加速</h3><p>CDN的全称是<strong>Content Delivery Network</strong>，即内容分发网络。</p>
+<p>CDN是构建在网络之上的内容分发网络，依靠部署在各地的边缘服务器，通过中心平台的负载均衡、内容分发、调度等功能模块，使用户就近获取所需内容，降低网络拥塞，提高用户访问响应速度和命中率。</p>
+<p>CDN的关键技术主要有内容存储和分发技术。</p>
+<p>由于github使用国外服务器，放在Github的资源在国内加载速度比较慢，因此需要使用CDN加速来优化网站打开速度，jsDelivr + Github便是免费且好用的CDN，非常适合博客网站使用。</p>
+<p>用法：<br><code>https://cdn.jsdelivr.net/gh/你的用户名/你的仓库名@发布的版本号/文件路径</code></p>
+<p>还可以配合PicGo图床上传工具的自定义域名前缀来上传图片，使用极其方便。</p>
+<h3 id="打造稳定快速、高效免费图床"><a href="#打造稳定快速、高效免费图床" class="headerlink" title="打造稳定快速、高效免费图床"></a>打造稳定快速、高效免费图床</h3><p>本图床是基于Github的，采用jsdelivr cdn进行加速，上传工具采用的是PicGo。</p>
+<p>新建一个GitHub仓库</p>
+<p>在主页依次选择<code>Settings</code>-<code>Developer settings</code>-<code>Personal access tokens</code>-<code>Generate new token</code>，填写好描述，勾选<code>repo</code>（仓库权限），然后点击<code>Generate token</code>生成一个<code>Token</code>，注意这个Token只会显示一次，自己先保存下来，或者等后面配置好PicGo后再关闭此网页</p>
+<p>配置PicGo</p>
+<p>前往下载PicGo，安装好后开始配置Github图床</p>
+<ul>
+<li>设定仓库名：按照【用户名 / 图床仓库名】的格式填写</li>
+<li>设定分支名：<code>master</code></li>
+<li>设定Token：粘贴之前生成的<code>Token</code></li>
+<li>指定存储路径：填写想要储存的路径，如images/，这样就会在仓库下创建一个名为 images 的文件夹，上传图片将会储存在此文件夹中</li>
+<li>设定自定义域名：它的作用是，在图片上传后，PicGo会按照【自定义域名+储存路径+上传的图片名】的方式生成访问链接，放到粘贴板上，因为我们要使用 jsDelivr 加速访问，所以可以设置为<code>https://cdn.jsdelivr.net/gh/用户名/图床仓库名</code>，上传完毕后，我们就可以通过<code>https://cdn.jsdelivr.net/gh/用户名/图床仓库名/图片路径</code>加速访问我们的图片了</li>
+</ul>
+<p>配置好PicGo后，将图片拖拽到上传区，将会自动上传并复制访问链接，将链接粘贴到博文中就行了。</p>
+<hr>
+<p>暂且写到这里，就此收键。</p>
+<p>To be continue…..</p>
 
             </div>
             <hr/>
@@ -474,7 +667,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://kanbaraleo.github.io" rel="external nofollow noreferrer">Kanbara</a>
+                    <a href="http://kanbaraleo.github.io" rel="external nofollow noreferrer">Kanbaraleo</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -484,7 +677,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://kanbaraleo.github.io/2020/04/04/hello-world/">http://kanbaraleo.github.io/2020/04/04/hello-world/</a>
+                    <a href="http://kanbaraleo.github.io/2020/04/02/hexo-github-da-jian-ge-ren-bo-ke/">http://kanbaraleo.github.io/2020/04/02/hexo-github-da-jian-ge-ren-bo-ke/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -497,7 +690,7 @@
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="http://kanbaraleo.github.io" target="_blank">Kanbara</a>
+                    <a href="http://kanbaraleo.github.io" target="_blank">Kanbaraleo</a>
                     !
                 </span>
             </div>
@@ -521,7 +714,15 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/Typora/">
+                                    <span class="chip bg-color">Typora</span>
+                                </a>
+                            
+                                <a href="/tags/Markdown/">
+                                    <span class="chip bg-color">Markdown</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -952,40 +1153,47 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/04/04/hexo-yilia-zhu-ti-you-hua/">
+                <a href="/2020/04/02/hello-world/">
                     <div class="card-image">
                         
+                        <img src="/source/images/xxx.jpg" class="responsive-img" alt="搭建博客">
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="Hexo yilia 主题优化">
-                        
-                        <span class="card-title">Hexo yilia 主题优化</span>
+                        <span class="card-title">搭建博客</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            yilia主题优化查看所有文章缺失模块
-在首次使用yilia时，点击所有文章时会出现模块找不到的错误，根据提示复制操作
-
-
-_config.yml路径是指 根目录下的，而非 yilia 主题下
-
-
-配置图片资源
-路径 blog/source
+                            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-04
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-02
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Kanbara
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Markdown/" class="post-category">
+                                    Markdown
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Typora/">
+                        <span class="chip bg-color">Typora</span>
+                    </a>
+                    
+                    <a href="/tags/Markdown/">
+                        <span class="chip bg-color">Markdown</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -994,14 +1202,13 @@ _config.yml路径是指 根目录下的，而非 yilia 主题下
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+                本篇&nbsp;<i class="far fa-dot-circle"></i>
             </div>
             <div class="card">
-                <a href="/2020/04/04/hexo-github-da-jian-ge-ren-bo-ke/">
+                <a href="/2020/04/02/hexo-github-da-jian-ge-ren-bo-ke/">
                     <div class="card-image">
                         
-                        
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="搭建博客">
+                        <img src="/source/images/xxx.jpg" class="responsive-img" alt="搭建博客">
                         
                         <span class="card-title">搭建博客</span>
                     </div>
@@ -1014,15 +1221,32 @@ _config.yml路径是指 根目录下的，而非 yilia 主题下
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-04
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-02
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Kanbara
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Markdown/" class="post-category">
+                                    Markdown
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Typora/">
+                        <span class="chip bg-color">Typora</span>
+                    </a>
+                    
+                    <a href="/tags/Markdown/">
+                        <span class="chip bg-color">Markdown</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -1299,10 +1523,6 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
 
 
-    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
-        <i class="fas fa-rss"></i>
-    </a>
-
 </div>
     </div>
 </footer>
@@ -1393,6 +1613,6 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"userConfig":null,"pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":200,"height":600,"hOffset":0,"vOffset":-198},"mobile":{"show":true},"react":{"opacity":1},"dialog":{"enable":true,"hitokoto":true},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/"});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"userConfig":null,"pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":200,"height":600,"hOffset":20,"vOffset":-198},"mobile":{"show":true},"react":{"opacity":1},"dialog":{"enable":true,"hitokoto":true},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/"});</script></body>
 
 </html>
