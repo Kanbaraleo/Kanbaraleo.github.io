@@ -1,0 +1,2030 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Java学习 (二), 博客,github,hexo,matery">
+    <meta name="description" content="个人学习网站">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>Java学习 (二) | Asgard</title>
+    <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.iofavicon.png">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/css/my.css">
+
+    <script src="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/libs/jquery/jquery.min.js"></script>
+    
+<meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Asgard</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/galleries" class="waves-effect waves-light">
+      
+      <i class="fas fa-image" style="zoom: 0.6;"></i>
+      
+      <span>相册</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Asgard</div>
+        <div class="logo-desc">
+            
+            个人学习网站
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/galleries" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-image"></i>
+			
+			相册
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+<script src="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('你不知道密码，你乱输个什么锤子！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/images/5.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Java学习 (二)</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+        
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    .toc-fixed .toc-link::before{
+        position: fixed!important;/*当toc的位置改为fixed时，.toc-link::before也要改为fixed*/
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Java/">
+                                <span class="chip bg-color">Java</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Markdown/" class="post-category">
+                                Markdown
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2020-04-14
+                </div>
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    7k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    28 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="Java-运算符"><a href="#Java-运算符" class="headerlink" title="Java 运算符"></a>Java 运算符</h2><p>计算机的最基本用途之一就是执行数学运算，作为一门计算机语言，Java也提供了一套丰富的运算符来操纵变量。我们可以把运算符分成以下几组：</p>
+<ul>
+<li>算术运算符</li>
+<li>关系运算符</li>
+<li>位运算符</li>
+<li>逻辑运算符</li>
+<li>赋值运算符</li>
+<li>其他运算符</li>
+</ul>
+<p><strong>鉴于与其他编程语言用法类似，以下内容不再详细记载</strong></p>
+<p><a href="https://www.runoob.com/java/java-operators.html" target="_blank" rel="noopener">运算符详细教程</a></p>
+<h2 id="Java-循环结构-for-while-及-do…while"><a href="#Java-循环结构-for-while-及-do…while" class="headerlink" title="Java 循环结构 - for, while 及 do…while"></a>Java 循环结构 - for, while 及 do…while</h2><p>顺序结构的程序语句只能被执行一次。如果您想要同样的操作执行多次,，就需要使用循环结构。 </p>
+<p>Java中有三种主要的循环结构：</p>
+<ul>
+<li>while 循环</li>
+<li>do…while 循环</li>
+<li>for 循环</li>
+</ul>
+<p>对于 while 语句而言，如果不满足条件，则不能进入循环。但有时候我们需要即使不满足条件，也至少执行一次。</p>
+<p>do…while 循环和 while 循环相似，不同的是，<strong>do…while 循环至少会执行一次</strong>。</p>
+<p><strong>在Java5中引入了一种主要用于数组的增强型for循环。</strong></p>
+<h3 id="Java-增强-for-循环"><a href="#Java-增强-for-循环" class="headerlink" title="Java 增强 for 循环"></a>Java 增强 for 循环</h3><p>Java 增强 for 循环语法格式如下:</p>
+<pre><code>for(声明语句 : 表达式)
+{
+   //代码句子
+}</code></pre><p><strong>声明语句</strong>：声明新的局部变量，<strong>该变量的类型必须和数组元素的类型匹配</strong>。其作用域限定在循环语句块，其值与此时数组元素的值相等。 </p>
+<p><strong>表达式：表达式是要访问的<code>数组名</code>，或者是<code>返回值为数组</code>的<code>方法</code></strong>。</p>
+<p>实例</p>
+<pre><code>public class Test {
+   public static void main(String args[]){
+      int [] numbers = {10, 20, 30, 40, 50};
+
+      for(int x : numbers ){
+         System.out.print( x );
+         System.out.print(",");
+      }
+      System.out.print("\n");
+      String [] names ={"James", "Larry", "Tom", "Lacy"};
+      for( String name : names ) {
+         System.out.print( name );
+         System.out.print(",");
+      }
+   }
+}</code></pre><p>以上实例编译运行结果如下：</p>
+<pre><code>10,20,30,40,50,
+James,Larry,Tom,Lacy,</code></pre><h3 id="break-关键字"><a href="#break-关键字" class="headerlink" title="break 关键字"></a>break 关键字</h3><p><strong>break 主要用在<code>循环语句</code>或者<code>switch 语句</code>中，用来跳出整个语句块。</strong></p>
+<p><strong>break 跳出<code>最里层</code>的循环，并且继续执行该循环下面的语句。</strong></p>
+<h3 id="continue-关键字"><a href="#continue-关键字" class="headerlink" title="continue 关键字"></a>continue 关键字</h3><p><strong>continue 适用于<code>任何循环控制结构</code>中。作用是让程序立刻跳转到下一次循环的迭代。</strong></p>
+<p><strong>在 <code>for</code>循环中，continue 语句使程序立即跳转到<code>更新语句</code>。</strong></p>
+<pre><code>for(初始化; 布尔表达式; 更新) {
+    //代码语句
+}</code></pre><p><strong>在 <code>while 或者 do…while</code>循环中，程序立即跳转到<code>布尔表达式</code>的判断语句。</strong> </p>
+<h2 id="Java-条件语句-if…else"><a href="#Java-条件语句-if…else" class="headerlink" title="Java 条件语句 - if…else"></a>Java 条件语句 - if…else</h2><h3 id="if…else语句"><a href="#if…else语句" class="headerlink" title="if…else语句"></a>if…else语句</h3><p><strong>if 语句后面可以跟 else 语句</strong>，当 if 语句的布尔表达式值为 false 时，else 语句块会被执行。</p>
+<pre><code>if(布尔表达式){
+   //如果布尔表达式的值为true
+}else{
+   //如果布尔表达式的值为false
+}</code></pre><h3 id="if…else-if…else-语句"><a href="#if…else-if…else-语句" class="headerlink" title="if…else if…else 语句"></a>if…else if…else 语句</h3><p>if 语句后面可以跟 else if…else 语句，<strong>这种语句可以检测到<code>多种可能的情况</code>。</strong></p>
+<p>使用 if，else if，else 语句的时候，需要注意下面几点：</p>
+<ul>
+<li><strong>if 语句至多有<code>1 个</code>else 语句，else 语句在所有的 <code>else if</code>语句之后。</strong></li>
+<li>if 语句可以有若干个 else if 语句，它们必须在 else 语句之前。</li>
+<li><strong>一旦其中一个 else if 语句检测为 true，其他的 else if 以及 else 语句都将<code>跳过执行</code>。</strong></li>
+</ul>
+<h3 id="嵌套的-if…else-语句"><a href="#嵌套的-if…else-语句" class="headerlink" title="嵌套的 if…else 语句"></a>嵌套的 if…else 语句</h3><p>用嵌套的 if…else 语句是合法的。也就是说你<strong>可以在另一个 if 或者 else if 语句中使用 if 或者 else if 语句。</strong></p>
+<h2 id="Java-switch-case-语句"><a href="#Java-switch-case-语句" class="headerlink" title="Java switch case 语句"></a>Java switch case 语句</h2><p>switch case 语句<strong>判断一个变量与一系列值中某个值是否相等，每个值称为一个分支</strong>。</p>
+<pre><code>switch(expression){
+    case value :
+       //语句
+       break; //可选
+    case value :
+       //语句
+       break; //可选
+    //你可以有任意数量的case语句
+    default : //可选
+       //语句
+}</code></pre><p>switch case 语句有如下规则：</p>
+<ul>
+<li>switch 语句中的<strong>变量类型可以是： <code>byte、short、int 或者 char</code>。从 Java SE 7 开始，switch 支持<code>字符串 String 类型</code>了，同时 case 标签必须为<code>字符串常量</code>或<code>字面量</code>。</strong></li>
+<li>switch 语句可以拥有多个 case 语句。每个 case 后面跟一个要比较的值和冒号。</li>
+<li><strong>case 语句中的<code>值</code>的数据类型必须与<code>变量</code>的数据类型相同，而且<code>只能是常量或者字面常量</code>。</strong></li>
+<li>当变量的值与 case 语句的值相等时，那么 case 语句之后的语句开始执行，<strong>直到 break 语句出现才会跳出 switch 语句</strong>。</li>
+<li>当遇到 break 语句时，switch 语句终止。程序跳转到 switch 语句后面的语句执行。<strong>case 语句不必须要包含 break 语句。如果没有 break 语句出现，程序会继续执行下一条 case 语句，直到出现 break 语句</strong>。</li>
+<li>switch 语句可以包含一个 <strong>default 分支，该分支一般是 switch 语句的最后一个分支（可以在任何位置，但建议在最后一个）。default 在没有 case 语句的值和变量值相等的时候执行。default 分支<code>不需要 break 语句</code>。</strong></li>
+</ul>
+<p><strong>switch case 执行时，一定会先进行匹配，匹配成功返回当前 case 的值，再根据是否有 break，判断是否继续输出，或是跳出判断。</strong></p>
+<h2 id="Java-Number-amp-Math-类"><a href="#Java-Number-amp-Math-类" class="headerlink" title="Java Number &amp; Math 类"></a>Java Number &amp; Math 类</h2><p><strong>一般地，当需要使用数字的时候，我们通常使用内置数据类型，如：byte、int、long、double 等。</strong></p>
+<p>实例</p>
+<pre><code>int a = 5000;
+float b = 13.65f;
+byte c = 0x4a;</code></pre><p>然而，在实际开发过程中，我们经常会遇到需要使用对象，而不是内置数据类型的情形。为了解决这个问题，<strong>Java 语言为每一个内置数据类型提供了对应的包装类</strong>。 </p>
+<p>所有的包装类<code>（Integer、Long、Byte、Double、Float、Short）</code>都是<strong><code>抽象类 Number</code> 的子类</strong>。</p>
+<p> <img src="https://www.runoob.com/wp-content/uploads/2013/12/number1.png" alt=""></p>
+<p>这种由编译器特别支持的包装称为装箱，所以当<strong>内置数据类型被当作对象使用的时候，编译器会把内置类型<code>装箱</code>为包装类。</strong>相似的，<strong>编译器也可以把一个对象<code>拆箱</code>为内置类型</strong>。Number 类属于 java.lang 包。 </p>
+<p>下面是一个使用 Integer 对象的实例：</p>
+<pre><code>public class Test{
+
+   public static void main(String args[]){
+      Integer x = 5;
+      x =  x + 10;
+      System.out.println(x); 
+   }
+}</code></pre><p>以上实例编译运行结果如下：</p>
+<pre><code>15</code></pre><p><strong>当 x 被赋为整型值时，由于x是一个对象，所以编译器要对x进行<code>装箱</code>。然后，为了使x能进行加运算，所以要对x进行<code>拆箱</code>。</strong> </p>
+<h3 id="Java-Math-类"><a href="#Java-Math-类" class="headerlink" title="Java Math 类"></a>Java Math 类</h3><p><strong>Java 的 Math 包含了用于执行基本数学运算的<code>属性</code>和<code>方法</code></strong>，如初等指数、对数、平方根和三角函数。</p>
+<p><strong>Math 的方法都被定义为 <code>static</code>形式，通过 Math 类可以在<code>主函数</code>中直接调用。</strong></p>
+<pre><code>public class Test {  
+    public static void main (String []args)  
+    {  
+        System.out.println("90 度的正弦值：" + Math.sin(Math.PI/2));  
+        System.out.println("0度的余弦值：" + Math.cos(0));  
+        System.out.println("60度的正切值：" + Math.tan(Math.PI/3));  
+        System.out.println("1的反正切值： " + Math.atan(1));  
+        System.out.println("π/2的角度值：" + Math.toDegrees(Math.PI/2));  
+        System.out.println(Math.PI);  
+    }  
+}</code></pre><h3 id="Number-amp-Math-类方法"><a href="#Number-amp-Math-类方法" class="headerlink" title="Number &amp; Math 类方法"></a>Number &amp; Math 类方法</h3><p><a href="https://www.runoob.com/java/java-number.html" target="_blank" rel="noopener">常用方法请参考</a></p>
+<h3 id="Math-的-floor-round-和-ceil-方法实例比较"><a href="#Math-的-floor-round-和-ceil-方法实例比较" class="headerlink" title="Math 的 floor,round 和 ceil 方法实例比较"></a>Math 的 floor,round 和 ceil 方法实例比较</h3><ul>
+<li>Math.floor（地板）</li>
+<li>Math.round（四舍五入）</li>
+<li>Math.ceil（天花板）</li>
+</ul>
+<h2 id="Java-Character-类"><a href="#Java-Character-类" class="headerlink" title="Java Character 类"></a>Java Character 类</h2><p><strong><code>Character 类</code>用于对<code>单个字符</code>进行操作。</strong></p>
+<p><strong><code>Character 类</code>在<code>对象</code>中包装一个基本类型 <code>char</code> 的值</strong></p>
+<pre><code>char ch = 'a';
+
+// Unicode 字符表示形式
+char uniChar = '\u039A'; 
+
+// 字符数组
+char[] charArray ={ 'a', 'b', 'c', 'd', 'e' };</code></pre><p>然而，在实际开发过程中，我们经常会遇到<strong>需要使用对象，而不是内置数据类型的情况</strong>。为了解决这个问题，Java语言为内置数据类型char提供了包装类Character类。 </p>
+<p>Character类提供了一系列方法来操纵字符。你可以<strong>使用Character的构造方法创建一个Character类对象</strong>，例如： </p>
+<pre><code>Character ch = new Character('a');</code></pre><p>在某些情况下，Java编译器会自动创建一个Character对象。</p>
+<p>例如，<strong>将一个<code>char</code>类型的参数传递给需要一个<code>Character</code>类型参数的方法时，那么<code>编译器</code>会自动地将<code>char</code>类型参数转换为<code>Character</code>对象。 这种特征称为<code>装箱</code>，反过来称为<code>拆箱</code>。</strong> </p>
+<p>实例</p>
+<pre><code>// 原始字符 'a' 装箱到 Character 对象 ch 中
+Character ch = 'a';
+
+// 原始字符 'x' 用 test 方法装箱
+// 再返回拆箱的值到 'c'
+char c = test('x');</code></pre><h3 id="转义序列"><a href="#转义序列" class="headerlink" title="转义序列"></a>转义序列</h3><p><a href="https://www.runoob.com/java/java-character.html" target="_blank" rel="noopener">转义序列请参考</a></p>
+<p><strong>当打印语句遇到一个转义序列时，编译器可以正确地对其进行解释。</strong></p>
+<p>以下实例转义双引号并输出：</p>
+<pre><code>public class Test {
+
+   public static void main(String args[]) {
+      System.out.println("访问\"菜鸟教程!\"");
+   }
+}</code></pre><p>以上实例编译运行结果如下： </p>
+<pre><code>访问"菜鸟教程!"</code></pre><h3 id="Character-方法"><a href="#Character-方法" class="headerlink" title="Character 方法"></a>Character 方法</h3><p><a href="https://www.runoob.com/java/java-character.html" target="_blank" rel="noopener">Character类的方法请参考</a></p>
+<h2 id="Java-String-类"><a href="#Java-String-类" class="headerlink" title="Java String 类"></a>Java String 类</h2><p>字符串广泛应用 在 Java 编程中，在 Java 中<strong>字符串属于对象</strong>，Java 提供了 <strong>String 类来创建和操作字符串</strong>。 </p>
+<h3 id="创建字符串"><a href="#创建字符串" class="headerlink" title="创建字符串"></a>创建字符串</h3><p>创建字符串最简单的方式如下:</p>
+<pre><code>String greeting = "菜鸟教程";</code></pre><p>在代码中遇到字符串常量时，这里的值是 “菜鸟教程””，编译器会使用该值创建一个 String 对象。</p>
+<p>和其它对象一样，<strong>可以使用<code>关键字</code>和<code>构造方法</code>来创建 String 对象。</strong></p>
+<p>String 类有<strong><code>11 种构造方法</code>，这些方法提供不同的参数来初始化字符串</strong>，比如提供一个字符数组参数:</p>
+<pre><code>//StringDemo 字符串示范
+public class StringDemo
+{
+   public static void main(String args[]){
+      char[] helloArray = { 'r', 'u', 'n', 'o', 'o', 'b'};
+      String helloString = new String(helloArray);  
+      System.out.println( helloString );
+   }
+}</code></pre><p>以上实例编译运行结果如下：</p>
+<pre><code>runoob</code></pre><p><strong>注意:String 类是不可改变的，所以你一旦创建了 String 对象，那它的值就无法改变了</strong></p>
+<p><strong>String 类是不可改变的解析</strong>，例如：</p>
+<pre><code>String s = "Google";
+System.out.println("s = " + s);
+
+s = "Runoob";
+System.out.println("s = " + s);</code></pre><p>输出结果为：</p>
+<pre><code>Google
+Runoob</code></pre><p>从结果上看是改变了，但为什么说String对象是不可变的呢？</p>
+<p><strong>原因在于实例中的 s 只是一个 String 对象的引用，并不是对象本身，当执行 s = “Runoob”; 创建了一个新的对象 “Runoob”，而原来的 “Google” 还存在于内存中。</strong></p>
+<p><img src="https://www.runoob.com/wp-content/uploads/2013/12/string-no-modify.png" alt=""></p>
+<p>还可以根据 jdk 的源码来分析。</p>
+<p><strong>字符串实际上就是一个 <code>char 数组</code>，并且内部就是<code>封装</code>了一个 char 数组</strong>。</p>
+<p><strong>并且这里 char 数组是被 <code>final</code> 修饰的</strong>:</p>
+<pre><code>public final class String
+    implements java.io.Serializable, Comparable&lt;String&gt;, CharSequence {
+    /** The value is used for character storage. */
+    private final char value[];</code></pre><p><strong>并且 String 中的所有的方法，都是对于 <code>char 数组的改变</code>，只要是对它的改变，方法内部都是<code>返回一个新的 String 实例</code>。</strong></p>
+<p>如果<strong>需要对字符串做很多修改，那么应该选择使用 <a href="https://www.runoob.com/java/java-stringbuffer.html" target="_blank" rel="noopener"> StringBuffer &amp; StringBuilder </a> 类。</strong> </p>
+<h3 id="字符串长度"><a href="#字符串长度" class="headerlink" title="字符串长度"></a>字符串长度</h3><p><strong>用于<code>获取有关对象的信息的方法</code>称为<code>访问器方法</code>。</strong></p>
+<p><strong>String 类的一个<code>访问器方法</code>是 <code>length() 方法</code>，它返回字符串对象包含的<code>字符数</code>。</strong></p>
+<p>下面的代码执行后，len 变量等于 14:</p>
+<pre><code>public class StringDemo {
+    public static void main(String args[]) {
+        String site = "www.runoob.com";
+        int len = site.length();
+        System.out.println( "菜鸟教程网址长度 : " + len );
+   }
+}</code></pre><p>以上实例编译运行结果如下：</p>
+<pre><code>菜鸟教程网址长度 : 14</code></pre><h4 id="length-方法，length-属性和-size-方法的区别"><a href="#length-方法，length-属性和-size-方法的区别" class="headerlink" title="length() 方法，length 属性和 size() 方法的区别:"></a>length() 方法，length 属性和 size() 方法的区别:</h4><ul>
+<li><strong><code>length() 方法</code>是针对<code>字符串</code>来说的，要<code>求一个字符串的长度</code>就要用到它的<code>length()方法</code>；</strong> </li>
+<li><strong><code>length 属性</code>是针对 Java 中的<code>数组</code>来说的，要求<code>数组的长度</code>可以用其 <code>length 属性</code>；</strong> </li>
+<li><strong>Java 中的 <code>size() 方法</code>是针对<code>泛型集合</code>说的, 如果想看这个<code>泛型有多少个元素</code>, 就调用此方法来查看!</strong><br><a href="https://www.runoob.com/java/java-generics.html" target="_blank" rel="noopener">泛型具体教程</a> </li>
+</ul>
+<p>演示这两个方法和一个属性的用法：</p>
+<pre><code>import java.util.ArrayList;
+import java.util.List;
+
+public class Main {
+
+    public static void main(String[] args) {
+        String array[] = { "First", "Second", "Third" };
+        String a = "HelloWorld";
+        List&lt;String&gt; list = new ArrayList&lt;String&gt;();
+        list.add(a);
+        System.out.println("数组array的长度为" + array.length);
+        System.out.println("字符串a的长度为" + a.length());
+        System.out.println("list中元素个数为" + list.size());
+
+    }
+}</code></pre><p>输出的值为: </p>
+<pre><code>数组array的长度为3
+字符串a的长度为10
+list中元素个数为1</code></pre><h3 id="连接字符串"><a href="#连接字符串" class="headerlink" title="连接字符串"></a>连接字符串</h3><p>String 类提供了连接两个字符串的方法：</p>
+<pre><code>// 返回 string2 连接 string1 的新字符串
+string1.concat(string2);
+
+// 也可以对字符串常量使用 concat() 方法
+"我的名字是 ".concat("Runoob");
+
+// 更常用的是使用'+'操作符来连接字符串
+String string1 = "菜鸟教程网址：";     
+System.out.println("1、" + string1 + "www.runoob.com");  </code></pre><p>以上实例编译运行结果如下：</p>
+<pre><code>1、菜鸟教程网址：www.runoob.com</code></pre><p>对于<strong>字符串的<code>加运算</code>，当编译成 class 文件时，会<code>自动编译</code>为 <code>StringBuffer</code> 来进行字符串的连接操作。</strong></p>
+<p>如下列代码：</p>
+<pre><code>String a = "a";
+String b = "b";
+String c = a + b;</code></pre><p>相当于：</p>
+<pre><code>String c = new StringBuffer().append(a).append(b).toString();</code></pre><p>同时对于字符串常量池：</p>
+<p><strong>当一个字符串是一个<code>字面量</code>时，它会被放到一个<code>常量池</code>中，等待<code>复用</code>。</strong></p>
+<pre><code>String a = "saff";                 // 常量池
+String b = "saff";                 // 缓冲池
+String c = new String("saff");    // 堆内存中
+System.out.println(a.equal(b));  // true
+System.out.println(a.equal(c));  // true
+System.out.println(a == b);  // true
+System.out.println(a == c);  // false两个对象的地址值不一样。</code></pre><p><strong>“==””这里的比较是针对两个String类型的<code>变量的引用</code>，也就是说如果两个String类型的变量，他们所引用的是同一个string对象（<code>指向同一个内存堆</code>），即返回true。</strong> </p>
+<p><strong>String对象继承自Object，并且对equals方法进行了重写，用此方法进行比较时，其实是对String对象封装的<code>字符串内容</code>进行比较，相同返回true。</strong></p>
+<p><strong>再来看<code>b</code>这个字符串对象并不是通过<code>new</code>来创建的，所以虚拟机并不会为它分配内存堆，而是先到String<code>缓冲池</code>中寻找是否存在与“saff”相同值的String对象存在，如果有，直接将该对象的引用赋值给str，若没有，则<code>虚拟机</code>会在<code>缓冲池</code>内创建此对象，其动作就是<code>new String(“saff”);</code>,然后把此String对象的引用赋值给b。</strong></p>
+<p><strong>众所周知，通过 <code>new 关键字</code>来生成对象是在<code>堆区</code>进行的，而在堆区进行对象生成的过程是<code>不会去检测该对象是否已经存在</code>的。因此通过 new 来创建对象，创建出的<code>一定是不同的对象</code>，即使字符串的<code>内容是相同</code>的。</strong></p>
+<p><strong>面试题1:</strong></p>
+<pre><code>String s1="a"+"b"+"c";
+String s2="abc";
+System.out.println(s1==s2);
+System.out.println(s1.equals(s2));</code></pre><p><strong>java 中常量优化机制，<code>编译时</code> s1 已经成为 abc 在<code>常量池</code>中查找创建，s2 不需要再创建。</strong> </p>
+<p><strong>面试题2:</strong></p>
+<pre><code>String s1="ab";
+String s2="abc";
+String s3=s1+"c";
+System.out.println(s3==s2);         // false
+System.out.println(s3.equals(s2));  // true</code></pre><p><strong>先在<code>常量池</code>中创建 ab ，地址指向 s1, 再创建 abc ，指向 s2。对于 s3，先创建<code>StringBuilder（或 StringBuffer）对象</code>，通过 append 连接得到 abc ,再调用 <code>toString()</code> 转换得到的地址指向 s3。故 (s3==s2) 为 false。</strong></p>
+<h3 id="创建格式化字符串"><a href="#创建格式化字符串" class="headerlink" title="创建格式化字符串"></a>创建格式化字符串</h3><p>我们知道输出格式化数字可以使用 printf() 和 format() 方法。</p>
+<p><strong>String 类使用静态方法 <code>format()</code> 返回一个<code>String 对象</code>而<code>不是 PrintStream 对象</code>。</strong></p>
+<p><strong>String 类的静态方法 format() 能用来<code>创建可复用的格式化字符串</code>，而不仅仅是用于一次打印输出。</strong></p>
+<pre><code>String fs;
+fs = String.format("浮点型变量的值为 " +
+                   "%f, 整型变量的值为 " +
+                   " %d, 字符串变量的值为 " +
+                   " %s", floatVar, intVar, stringVar);</code></pre><h3 id="String-方法"><a href="#String-方法" class="headerlink" title="String 方法"></a>String 方法</h3><p>请参考：<a href="https://www.runoob.com/java/java-string.html" target="_blank" rel="noopener">String支持的方法</a></p>
+<h2 id="Java-StringBuffer-和-StringBuilder-类"><a href="#Java-StringBuffer-和-StringBuilder-类" class="headerlink" title="Java StringBuffer 和 StringBuilder 类"></a>Java StringBuffer 和 StringBuilder 类</h2><p><strong>当对字符串进行修改的时候，需要使用 <code>StringBuffer</code> 和 <code>StringBuilder</code> 类。</strong> </p>
+<p><strong>和 String 类不同的是，<code>StringBuffer</code> 和 <code>StringBuilder</code> 类的对象<code>能够被多次的修改</code>，并且<code>不产生新的未使用对象</code>。</strong> </p>
+<p>StringBuilder 类在 Java 5 中被提出，<strong>它和 StringBuffer 之间的最大不同在于 <code>StringBuilder 的方法不是线程安全的</code>（不能同步访问）。</strong> </p>
+<p><strong>由于 <code>StringBuilder</code> 相较于 <code>StringBuffer</code> 有<code>速度优势</code>，所以多数情况下建议使用 <code>StringBuilder</code> 类。然而在应用程序要求<code>线程安全</code>的情况下，则<code>必须使用 StringBuffer</code>类。</strong> </p>
+<pre><code>public class Test{
+  public static void main(String args[]){
+    StringBuffer sBuffer = new StringBuffer("菜鸟教程官网：");
+    sBuffer.append("www");
+    sBuffer.append(".runoob");
+    sBuffer.append(".com");
+    System.out.println(sBuffer);  
+  }
+}</code></pre><p>以上实例编译运行结果如下：</p>
+<pre><code>菜鸟教程官网：www.runoob.com</code></pre><h3 id="StringBuffer-方法"><a href="#StringBuffer-方法" class="headerlink" title="StringBuffer 方法"></a>StringBuffer 方法</h3><p><a href="https://www.runoob.com/java/java-stringbuffer.html" target="_blank" rel="noopener">StringBuffer 类支持的主要方法</a></p>
+<h2 id="Java-数组"><a href="#Java-数组" class="headerlink" title="Java 数组"></a>Java 数组</h2><p><strong>Java 语言中提供的数组是用来存储<code>固定大小</code>的<code>同类型</code>元素。</strong></p>
+<h3 id="声明数组变量"><a href="#声明数组变量" class="headerlink" title="声明数组变量"></a>声明数组变量</h3><p><strong>首先必须<code>声明</code>数组变量，才能在程序中使用数组。</strong>下面是声明数组变量的语法：</p>
+<pre><code>dataType[] arrayRefVar;   // 首选的方法
+
+或
+
+dataType arrayRefVar[];  // 效果相同，但不是首选方法</code></pre><p><strong>注意: 建议使用 <code>dataType[] arrayRefVar</code> 的声明风格声明数组变量。 <code>dataType arrayRefVar[]</code> 风格是来自 <code>C/C++ 语言</code> ，在Java中采用是为了<code>让 C/C++ 程序员能够快速理解java语言</code>。</strong> </p>
+<h3 id="创建数组"><a href="#创建数组" class="headerlink" title="创建数组"></a>创建数组</h3><p><strong>Java语言使用new操作符来<code>创建</code>数组，</strong>语法如下：</p>
+<pre><code>arrayRefVar = new dataType[arraySize];</code></pre><p>上面的语法语句做了两件事：</p>
+<ul>
+<li>使用 dataType[arraySize] 创建了一个数组。</li>
+<li><strong>把新创建的数组的<code>引用赋值</code>给变量 arrayRefVar。</strong></li>
+</ul>
+<p><strong>数组变量的<code>声明，和创建数组</code>可以用一条语句完成，</strong>如下所示：</p>
+<pre><code>dataType[] arrayRefVar = new dataType[arraySize];</code></pre><p>另外，你还可以使用如下的方式创建数组。</p>
+<pre><code>dataType[] arrayRefVar = {value0, value1, ..., valuek};</code></pre><p><strong>数组的<code>元素是通过索引访问的</code>。数组索引从 0 开始，所以索引值从 <code>0 到 arrayRefVar.length-1</code>。</strong></p>
+<pre><code>public class TestArray {
+   public static void main(String[] args) {
+      // 数组大小
+      int size = 10;
+      // 定义数组
+      double[] myList = new double[size];
+      myList[0] = 5.6;
+      myList[1] = 4.5;
+      myList[2] = 3.3;
+      myList[3] = 13.2;
+      myList[4] = 4.0;
+      myList[5] = 34.33;
+      myList[6] = 34.0;
+      myList[7] = 45.45;
+      myList[8] = 99.993;
+      myList[9] = 11123;
+      // 计算所有元素的总和
+      double total = 0;
+      for (int i = 0; i &lt; size; i++) {
+         total += myList[i];
+      }
+      System.out.println("总和为： " + total);
+   }
+}</code></pre><p>以上实例输出结果为：</p>
+<pre><code>总和为： 11367.373</code></pre><h3 id="处理数组"><a href="#处理数组" class="headerlink" title="处理数组"></a>处理数组</h3><pre><code>public class TestArray {
+   public static void main(String[] args) {
+      double[] myList = {1.9, 2.9, 3.4, 3.5};
+
+      // 打印所有数组元素
+      for (int i = 0; i &lt; myList.length; i++) {
+         System.out.println(myList[i] + " ");
+      }
+      // 计算所有元素的总和
+      double total = 0;
+      for (int i = 0; i &lt; myList.length; i++) {
+         total += myList[i];
+      }
+      System.out.println("Total is " + total);
+      // 查找最大元素
+      double max = myList[0];
+      for (int i = 1; i &lt; myList.length; i++) {
+         if (myList[i] &gt; max) max = myList[i];
+      }
+      System.out.println("Max is " + max);
+   }
+}</code></pre><p>以上实例编译运行结果如下：</p>
+<pre><code>1.9
+2.9
+3.4
+3.5
+Total is 11.7
+Max is 3.5</code></pre><h4 id="For-Each-循环"><a href="#For-Each-循环" class="headerlink" title="For-Each 循环"></a>For-Each 循环</h4><p>JDK 1.5 引进了一种新的循环类型，被称为<strong><code>For-Each 循环</code>或者<code>加强型循环</code></strong>，它能在不使用下标的情况下遍历数组。</p>
+<p>语法格式如下：</p>
+<pre><code>for(type element: array)
+{
+    System.out.println(element);
+}</code></pre><p>实例</p>
+<pre><code>public class TestArray {
+   public static void main(String[] args) {
+      double[] myList = {1.9, 2.9, 3.4, 3.5};
+
+      // 打印所有数组元素
+      for (double element: myList) {
+         System.out.println(element);
+      }
+   }
+}</code></pre><p>以上实例编译运行结果如下：</p>
+<pre><code>1.9
+2.9
+3.4
+3.5</code></pre><h3 id="数组作为函数的参数"><a href="#数组作为函数的参数" class="headerlink" title="数组作为函数的参数"></a>数组作为函数的参数</h3><p><strong>数组可以<code>作为参数传递给方法</code>。</strong></p>
+<p>例如，下面的例子就是一个打印 int 数组中元素的方法:</p>
+<pre><code>public static void printArray(int[] array) {
+  for (int i = 0; i &lt; array.length; i++) {
+    System.out.print(array[i] + " ");
+  }
+}</code></pre><p>下面例子调用 printArray 方法打印出 3，1，2，6，4 和 2：</p>
+<pre><code>printArray(new int[]{3, 1, 2, 6, 4, 2}); //注意这种写法</code></pre><h3 id="数组作为函数的返回值"><a href="#数组作为函数的返回值" class="headerlink" title="数组作为函数的返回值"></a>数组作为函数的返回值</h3><pre><code>public static int[] reverse(int[] list) {
+  int[] result = new int[list.length];
+
+  for (int i = 0, j = result.length - 1; i &lt; list.length; i++, j--) {
+    result[j] = list[i];
+  }
+  return result;
+}</code></pre><p><strong>以上实例中 <code>result 数组</code>作为<code>函数的返回值</code>。</strong></p>
+<h3 id="多维数组"><a href="#多维数组" class="headerlink" title="多维数组"></a>多维数组</h3><p><strong><code>多维数组</code>可以看成是<code>数组的数组</code>，比如<code>二维数组</code>就是一个<code>特殊的一维数组</code>，其<code>每一个元素</code>都是一个<code>一维数组</code></strong>，例如：</p>
+<pre><code>String str[][] = new String[3][4];</code></pre><h4 id="多维数组的动态初始化（以二维数组为例）"><a href="#多维数组的动态初始化（以二维数组为例）" class="headerlink" title="多维数组的动态初始化（以二维数组为例）"></a>多维数组的动态初始化（以二维数组为例）</h4><p>直接为每一维分配空间，格式如下： </p>
+<pre><code>type[][] typeName = new type[typeLength1][typeLength2];</code></pre><p><strong>type 可以为<code>基本数据类型</code>和<code>复合数据类型</code>，arraylength1 和 arraylength2 <code>必须为正整数</code>，<code>arraylength1 为行数</code>，<code>arraylength2 为列数</code>。</strong></p>
+<p>例如：</p>
+<pre><code>int a[][] = new int[2][3];</code></pre><p>解析：</p>
+<p>二维数组 a 可以看成一个<strong>两行三列的数组。</strong></p>
+<p>**从最高维开始，分别为每一维分配空间，例如： </p>
+<pre><code>String s[][] = new String[2][];
+s[0] = new String[2];
+s[1] = new String[3];
+s[0][0] = new String("Good");
+s[0][1] = new String("Luck");
+s[1][0] = new String("to");
+s[1][1] = new String("you");
+s[1][2] = new String("!");</code></pre><p>解析： </p>
+<p><strong><code>s[0]=new String[2]</code> 和 <code>s[1]=new String[3]</code> 是为最高维分配引用空间，也就是为最高维限制其能保存数据的最长的长度，然后再为其每个数组元素单独分配空间 <code>s[0][0]=new String("Good")</code> 等操作。</strong></p>
+<h3 id="多维数组的引用（以二维数组为例）"><a href="#多维数组的引用（以二维数组为例）" class="headerlink" title="多维数组的引用（以二维数组为例）"></a>多维数组的引用（以二维数组为例）</h3><p><strong>对二维数组中的每个元素，引用方式为 <code>arrayName[index1][index2]</code></strong>，例如：</p>
+<h3 id="Arrays-类"><a href="#Arrays-类" class="headerlink" title="Arrays 类"></a>Arrays 类</h3><p><strong><code>java.util.Arrays</code> 类能方便地<code>操作数组</code>，它提供的<code>所有方法都是静态</code>的。</strong></p>
+<p>具有以下功能：</p>
+<ul>
+<li><strong>给数组赋值</strong>：通过 <strong>fill 方法</strong>。</li>
+<li><strong>对数组排序</strong>：通过 <strong>sort 方法,按升序。</strong></li>
+<li><strong>比较数组</strong>：通过 <strong>equals 方法</strong>比较数组中元素值是否相等。</li>
+<li><strong>查找数组元素</strong>：通过 <strong><code>binarySearch 方法</code>能对<code>排序好</code>的数组进行<code>二分查找法</code></strong>操作。</li>
+</ul>
+<p><a href="https://www.runoob.com/java/java-array.html" target="_blank" rel="noopener">具体说明请查看</a></p>
+<h2 id="Java-日期时间"><a href="#Java-日期时间" class="headerlink" title="Java 日期时间"></a>Java 日期时间</h2><p><strong><code>java.util 包</code>提供了 <code>Date</code> 类来封装当前的日期和时间。 Date 类提供<code>两个构造函数</code>来实例化 Date 对象。</strong></p>
+<p><strong>第一个构造函数使用<code>当前日期和时间来初始化对象</code>。</strong></p>
+<pre><code>Date( )</code></pre><p><strong>第二个构造函数<code>接收一个参数</code>，该参数是从<code>1970年1月1日起的毫秒数</code>。</strong> </p>
+<pre><code>Date(long millisec)</code></pre><p>Date对象创建以后，可以调用下面的方法。</p>
+<p><a href="https://www.runoob.com/java/java-date-time.html" target="_blank" rel="noopener">具体方法</a></p>
+<h3 id="获取当前日期时间"><a href="#获取当前日期时间" class="headerlink" title="获取当前日期时间"></a>获取当前日期时间</h3><p>Java中获取当前日期和时间很简单，使用 <strong><code>Date 对象</code>的 <code>toString() 方法</code>来打印当前日期和时间</strong>，如下所示： </p>
+<pre><code>import java.util.Date;
+
+public class DateDemo {
+   public static void main(String args[]) {
+       // 初始化 Date 对象
+       Date date = new Date();
+
+       // 使用 toString() 函数显示日期时间
+       System.out.println(date.toString());
+   }
+}</code></pre><p>以上实例编译运行结果如下:</p>
+<pre><code>Wed Apr 15 20:54:19 CST 2020</code></pre><h3 id="日期比较"><a href="#日期比较" class="headerlink" title="日期比较"></a>日期比较</h3><p>Java使用以下三种方法来比较两个日期：</p>
+<ul>
+<li><strong>使用 <code>getTime()</code>方法获取<code>一个日期</code>（自1970年1月1日经历的毫秒数值），然后<code>比较这两个值</code>。</strong></li>
+<li><strong>使用方法 <code>before()，after() 和 equals()</code></strong>。例如，一个月的12号比18号早，则 new Date(99, 2, 12).before(new Date (99, 2, 18)) 返回true。</li>
+<li><strong>使用 <code>compareTo()</code>方法，它是由 Comparable 接口定义的，Date 类实现了这个接口。</strong></li>
+</ul>
+<h3 id="使用-SimpleDateFormat-格式化日期-重要"><a href="#使用-SimpleDateFormat-格式化日期-重要" class="headerlink" title="使用 SimpleDateFormat 格式化日期 (重要)"></a>使用 SimpleDateFormat 格式化日期 (重要)</h3><p><strong><code>SimpleDateFormat</code> 是一个以<code>语言环境</code>敏感的方式来<code>格式化和分析日期的类</code>。需要引进<code>import java.text.*;</code>包。</strong> SimpleDateFormat 允许你选择任何<code>用户自定义日期时间格式</code>来运行。**例如： </p>
+<pre><code>import  java.util.*;
+import java.text.*;
+
+public class DateDemo {
+   public static void main(String args[]) {
+
+      Date dNow = new Date( );
+      SimpleDateFormat ft = new SimpleDateFormat ("yyyy-MM-dd HH:mm:ss");
+
+      System.out.println("当前时间为: " + ft.format(dNow));
+   }
+}</code></pre><p>以上实例编译运行结果如下:</p>
+<pre><code>2020-04-15 21:53:50</code></pre><p>解析：</p>
+<pre><code>SimpleDateFormat ft = new SimpleDateFormat ("yyyy-MM-dd hh:mm:ss");</code></pre><p><strong>这一行代码确立了转换的格式，其中 <code>yyyy</code> 是完整的<code>公元年</code>，<code>MM</code> 是<code>月份</code>，<code>dd</code> 是<code>日期</code>，<code>HH:mm:ss</code> 是<code>时、分、秒</code></strong>。</p>
+<p><strong>注意: 有的格式大写，有的格式小写，例如 <code>MM</code> 是<code>月份</code>，<code>mm</code> 是<code>分</code>；<code>HH</code> 是 <code>24 小时制</code>，而 <code>hh</code> 是 <code>12 小时制</code>。</strong></p>
+<h3 id="日期和时间的格式化编码"><a href="#日期和时间的格式化编码" class="headerlink" title="日期和时间的格式化编码"></a>日期和时间的格式化编码</h3><p><a href="https://www.runoob.com/java/java-date-time.html" target="_blank" rel="noopener">具体参考</a></p>
+<h3 id="使用printf格式化日期"><a href="#使用printf格式化日期" class="headerlink" title="使用printf格式化日期"></a>使用printf格式化日期</h3><p><strong>printf 方法可以很轻松地格式化时间和日期。使用<code>两个字母格式</code>，它以 <code>%t 开头</code>并且以下面<code>表格中的一个字母结尾</code>。</strong></p>
+<p><a href="https://www.runoob.com/java/java-date-time.html" target="_blank" rel="noopener">具体参考</a></p>
+<p>实例</p>
+<pre><code>import java.util.Date;
+
+public class DateDemo {
+
+  public static void main(String args[]) {
+     // 初始化 Date 对象
+     Date date = new Date();
+
+     //c的使用  
+    System.out.printf("全部日期和时间信息：%tc%n",date);   // %n代表换行       
+    //f的使用  
+    System.out.printf("年-月-日格式：%tF%n",date);  
+    //d的使用  
+    System.out.printf("月/日/年格式：%tD%n",date);  
+    //r的使用  
+    System.out.printf("HH:MM:SS PM格式（12时制）：%tr%n",date);  
+    //t的使用  
+    System.out.printf("HH:MM:SS格式（24时制）：%tT%n",date);  
+    //R的使用  
+    System.out.printf("HH:MM格式（24时制）：%tR",date);  
+  }
+}</code></pre><p>以上实例编译运行结果如下:</p>
+<pre><code>全部日期和时间信息：星期一 九月 10 10:43:36 CST 2012  
+年-月-日格式：2012-09-10  
+月/日/年格式：09/10/12  
+HH:MM:SS PM格式（12时制）：10:43:36 上午  
+HH:MM:SS格式（24时制）：10:43:36  
+HH:MM格式（24时制）：10:43</code></pre><h3 id="Java-休眠-sleep"><a href="#Java-休眠-sleep" class="headerlink" title="Java 休眠(sleep)"></a>Java 休眠(sleep)</h3><p><strong><code>sleep()</code>使当前线程进入<code>停滞</code>状态（<code>阻塞当前线程</code>），<code>让出CPU</code>的使用、目的是<code>不让当前线程独自霸占该进程所获的CPU资源</code>，以留一定时间<code>给其他线程执行的机会</code>。</strong><br>你可以让程序休眠一毫秒的时间或者到您的计算机的寿命长的任意段时间。例如，下面的程序会休眠3秒：</p>
+<pre><code>import java.util.*;
+
+public class SleepDemo {
+   public static void main(String args[]) {
+      try { 
+         System.out.println(new Date( ) + "\n"); 
+         Thread.sleep(1000*3);   // Thread为线程类，休眠3秒
+         System.out.println(new Date( ) + "\n"); 
+      } catch (Exception e) { 
+          System.out.println("Got an exception!"); 
+      }
+   }
+}</code></pre><p>以上实例编译运行结果如下:</p>
+<pre><code>Thu Apr 16 19:09:58 CST 2020
+
+Thu Apr 16 19:10:01 CST 2020</code></pre><h3 id="测量时间"><a href="#测量时间" class="headerlink" title="测量时间"></a>测量时间</h3><pre><code>import java.util.*;
+
+public class DiffDemo {
+
+   public static void main(String args[]) {
+      try {
+         long start = System.currentTimeMillis( );
+         System.out.println(new Date( ) + "\n");
+         Thread.sleep(5*60*10);
+         System.out.println(new Date( ) + "\n");
+         long end = System.currentTimeMillis( );
+         long diff = end - start;
+         System.out.println("Difference is : " + diff);
+      } catch (Exception e) {
+         System.out.println("Got an exception!");
+      }
+   }
+}</code></pre><p>以上实例编译运行结果如下:</p>
+<pre><code>Thu Apr 16 19:15:37 CST 2020
+
+Thu Apr 16 19:15:40 CST 2020
+
+Difference is : 3018</code></pre><h3 id="Calendar类"><a href="#Calendar类" class="headerlink" title="Calendar类"></a>Calendar类</h3><p>我们现在已经能够格式化并创建一个日期对象了，但是我们如何才能<strong>设置和获取日期数据的特定部分呢，比如说小时，日，或者分钟</strong>? 我们又如何<strong>在日期的这些部分加上或者减去值</strong>呢? 答案是使用Calendar 类。 </p>
+<p><strong>Calendar类的功能要比Date类强大很多</strong>，而且在实现方式上也比Date类要复杂一些。</p>
+<p>Calendar类是一个<strong><code>抽象类</code>，在实际使用时实现特定的子类的对象，创建对象的<code>过程对程序员来说是透明的</code>，只需要使用<code>getInstance</code>方法创建即可。</strong></p>
+<h4 id="创建一个代表系统当前日期的Calendar对象"><a href="#创建一个代表系统当前日期的Calendar对象" class="headerlink" title="创建一个代表系统当前日期的Calendar对象"></a>创建一个代表系统<code>当前日期</code>的Calendar对象</h4><pre><code>Calendar c = Calendar.getInstance();//默认是当前日期</code></pre><h4 id="创建一个指定日期的Calendar对象"><a href="#创建一个指定日期的Calendar对象" class="headerlink" title="创建一个指定日期的Calendar对象"></a>创建一个指定日期的Calendar对象</h4><p>使用Calendar类代表特定的时间，需要首先创建一个Calendar的对象，然后再设定该对象中的年月日参数来完成。</p>
+<pre><code>//创建一个代表2009年6月12日的Calendar对象
+Calendar c1 = Calendar.getInstance();
+c1.set(2009, 6 - 1, 12);</code></pre><h4 id="Calendar类对象字段类型"><a href="#Calendar类对象字段类型" class="headerlink" title="Calendar类对象字段类型"></a>Calendar类对象字段类型</h4><p><a href="https://www.runoob.com/java/java-date-time.html" target="_blank" rel="noopener">常量具体参考</a></p>
+<h4 id="Calendar类对象信息的获得"><a href="#Calendar类对象信息的获得" class="headerlink" title="Calendar类对象信息的获得"></a>Calendar类对象信息的获得</h4><pre><code>Calendar c1 = Calendar.getInstance();
+// 获得年份
+int year = c1.get(Calendar.YEAR);
+// 获得月份
+int month = c1.get(Calendar.MONTH) + 1;
+// 获得日期
+int date = c1.get(Calendar.DATE);
+// 获得小时
+int hour = c1.get(Calendar.HOUR_OF_DAY);
+// 获得分钟
+int minute = c1.get(Calendar.MINUTE);
+// 获得秒
+int second = c1.get(Calendar.SECOND);
+// 获得星期几（注意（这个与Date类是不同的）：1代表星期日、2代表星期1、3代表星期二，以此类推）
+int day = c1.get(Calendar.DAY_OF_WEEK);</code></pre><h2 id="Java-正则表达式"><a href="#Java-正则表达式" class="headerlink" title="Java 正则表达式"></a>Java 正则表达式</h2><p>正则表达式<strong>定义了字符串的模式。</strong></p>
+<p>正则表达式<strong>可以用来搜索、编辑或处理文本。</strong></p>
+<p>正则表达式<strong>并不仅限于某一种语言，但是在每种语言中有细微的差别。</strong></p>
+<h4 id="正则表达式实例"><a href="#正则表达式实例" class="headerlink" title="正则表达式实例"></a>正则表达式实例</h4><p>一个字符串其实就是一个简单的正则表达式，例如 Hello World 正则表达式匹配 “Hello World” 字符串。</p>
+<p><strong>.（点号）也是一个正则表达式，它匹配<code>任何一个字符</code>如：”a” 或 “1”。</strong></p>
+<p>下表列出了一些正则表达式的实例及描述：<br><img src="https://cdn.jsdelivr.net/gh/Kanbaraleo/imgs/images/TIM%E5%9B%BE%E7%89%8720200416204116.png" alt=""></p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://kanbaraleo.github.io" rel="external nofollow noreferrer">Kanbaraleo</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://kanbaraleo.github.io/2020/04/14/java-xue-xi-er/">http://kanbaraleo.github.io/2020/04/14/java-xue-xi-er/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="http://kanbaraleo.github.io" target="_blank">Kanbaraleo</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/Java/">
+                                    <span class="chip bg-color">Java</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">恰钱钱咯</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/libs/valine/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'jAAdQPSvsN8EYhcPtVc0sc31-gzGzoHsz',
+        appKey: 'aGRMxoDLYU6BYXGVFeT4DUNh',
+        notify: 'false' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'mm',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: 'just do it'
+    });
+</script>
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2020/04/14/java-xue-xi-er/">
+                    <div class="card-image">
+                        
+                        <img src="/images/5.jpg" class="responsive-img" alt="Java学习 (二)">
+                        
+                        <span class="card-title">Java学习 (二)</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Java 运算符计算机的最基本用途之一就是执行数学运算，作为一门计算机语言，Java也提供了一套丰富的运算符来操纵变量。我们可以把运算符分成以下几组：
+
+算术运算符
+关系运算符
+位运算符
+逻辑运算符
+赋值运算符
+其他运算符
+
+鉴于与其他编程
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-14
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Markdown/" class="post-category">
+                                    Markdown
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">Java</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/04/12/java-xue-xi/">
+                    <div class="card-image">
+                        
+                        <img src="/images/3.jpg" class="responsive-img" alt="Java学习">
+                        
+                        <span class="card-title">Java学习</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Java 简介和基础语法Java主要特性
+Java语言是简单的：Java语言的语法与C语言和C++语言很接近，使得大多数程序员很容易学习和使用。另一方面，Java丢弃了C++中很少使用的、很难理解的、令人迷惑的那些特性，如操作符重载、多继承
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-12
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Markdown/" class="post-category">
+                                    Markdown
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">Java</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('10')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: Asgard<br />'
+            + '文章作者: Kanbara<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+    <footer class="page-footer bg-color">
+    
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2020</span>
+            <a href="http://kanbaraleo.github.io" target="_blank">Kanbara</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">23.8k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2020";
+                    var startMonth = "4";
+                    var startDate = "2";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+
+
+    <a href="mailto:1823593172@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1823593172" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1823593172" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/libs/materialize/materialize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/libs/aos/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+<script type="text/javascript">
+            var OriginTitile = document.title,
+                st;
+            document.addEventListener("visibilitychange", function () {
+                document.hidden ? (document.title = "✪ ω ✪你想捉迷藏吗", clearTimeout(st)) : (document.title =
+                    "ヾ(•ω•`)o找到你了！", st = setTimeout(function () {
+                        document.title = OriginTitile
+                    }, 3e3))
+            })
+        </script>
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"userConfig":null,"pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":200,"height":600,"hOffset":20,"vOffset":-198},"mobile":{"show":true},"react":{"opacity":1},"dialog":{"enable":true,"hitokoto":true},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/"});</script></body>
+
+</html>
