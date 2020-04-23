@@ -17,17 +17,17 @@
 
 
     <title>Java学习 二 | Asgard</title>
-    <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.iofavicon.png">
+    <link rel="icon" type="image/png" href="favicon.png">
 
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/libs/awesome/css/all.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/libs/materialize/materialize.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/libs/aos/aos.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/libs/animate/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/libs/lightGallery/css/lightgallery.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/css/matery.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/css/my.css">
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
 
-    <script src="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/libs/jquery/jquery.min.js"></script>
+    <script src="/libs/jquery/jquery.min.js"></script>
     
 <meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
@@ -39,7 +39,7 @@
             <div class="brand-logo">
                 <a href="/" class="waves-effect waves-light">
                     
-                    <img src="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
                     <span class="logo-span">Asgard</span>
                 </a>
@@ -137,7 +137,7 @@
 
     <div class="mobile-head bg-color">
         
-        <img src="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/medias/logo.png" class="logo-img circle responsive-img">
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">Asgard</div>
         <div class="logo-desc">
@@ -303,7 +303,7 @@
 </header>
 
     
-<script src="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/libs/cryptojs/crypto-js.min.js"></script>
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
 <script>
     (function() {
         let pwd = '';
@@ -319,7 +319,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/images/1.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/images/5.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -337,7 +337,7 @@
 <main class="post-container content">
 
     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
 <style>
     #articleContent h1::before,
     #articleContent h2::before,
@@ -474,7 +474,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-04-04
+                    2020-04-14
                 </div>
                 
 
@@ -483,14 +483,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    7k
+                    15.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    28 分
+                    59 分
                 </div>
                 
 
@@ -515,7 +515,25 @@
 <li>赋值运算符</li>
 <li>其他运算符</li>
 </ul>
-<p><strong>鉴于与其他编程语言用法类似，以下内容不再详细记载</strong></p>
+<p>重点讲一下instanceof 运算符</p>
+<h3 id="instanceof-运算符"><a href="#instanceof-运算符" class="headerlink" title="instanceof 运算符"></a>instanceof 运算符</h3><p>该运算符<strong>用于<code>操作对象实例(必须为引用类型，不能是基本类型)</code>，检查该对象是否是一个<code>特定类型</code>（<code>类类型或接口类型</code>）。</strong></p>
+<p>instanceof运算符使用格式如下：</p>
+<pre><code>( Object reference variable ) instanceof  (class/interface type)</code></pre><p>如果<strong>运算符<code>左侧变量所指的对象</code>，是操作符<code>右侧类或接口(class/interface)的一个对象</code>，那么<code>结果为真</code>。</strong></p>
+<p>下面是一个例子：</p>
+<pre><code>String name = "James";
+boolean result = name instanceof String; // 由于 name 是 String 类型，所以返回真</code></pre><p>如果<strong><code>被比较的对象兼容于右侧类型</code>,该运算符仍然<code>返回true</code>。</strong></p>
+<p>看下面的例子：</p>
+<pre><code>class Vehicle {}
+
+public class Car extends Vehicle {
+   public static void main(String[] args){
+       //向上转型
+      Vehicle a = new Car();   
+      boolean result =  a instanceof Car;
+      System.out.println( result);
+   }
+}</code></pre><p>以上实例编译运行结果如下：</p>
+<pre><code>true</code></pre><p><strong>鉴于大部分内容与其他编程语言用法类似，不再详细记载</strong></p>
 <p><a href="https://www.runoob.com/java/java-operators.html" target="_blank" rel="noopener">运算符详细教程</a></p>
 <h2 id="Java-循环结构-for-while-及-do…while"><a href="#Java-循环结构-for-while-及-do…while" class="headerlink" title="Java 循环结构 - for, while 及 do…while"></a>Java 循环结构 - for, while 及 do…while</h2><p>顺序结构的程序语句只能被执行一次。如果您想要同样的操作执行多次,，就需要使用循环结构。 </p>
 <p>Java中有三种主要的循环结构：</p>
@@ -1042,9 +1060,652 @@ int second = c1.get(Calendar.SECOND);
 int day = c1.get(Calendar.DAY_OF_WEEK);</code></pre><h2 id="Java-正则表达式"><a href="#Java-正则表达式" class="headerlink" title="Java 正则表达式"></a>Java 正则表达式</h2><p>正则表达式<strong>定义了字符串的模式。</strong></p>
 <p>正则表达式<strong>可以用来搜索、编辑或处理文本。</strong></p>
 <p>正则表达式<strong>并不仅限于某一种语言，但是在每种语言中有细微的差别。</strong></p>
-<h4 id="正则表达式实例"><a href="#正则表达式实例" class="headerlink" title="正则表达式实例"></a>正则表达式实例</h4><p>一个字符串其实就是一个简单的正则表达式，例如 Hello World 正则表达式匹配 “Hello World” 字符串。</p>
-<p><strong>.（点号）也是一个正则表达式，它匹配<code>任何一个字符</code>如：”a” 或 “1”。</strong></p>
+<p>给定一个正则表达式和另一个字符串，我们可以达到如下的目的：</p>
+<ul>
+<li><strong>给定的字符串是否符合正则表达式的<code>过滤逻辑</code>（称作”<code>匹配</code>“）</strong></li>
+<li><strong>可以通过正则表达式，<code>从字符串中获取我们想要的特定部分</code></strong></li>
+</ul>
+<h3 id="正则表达式实例"><a href="#正则表达式实例" class="headerlink" title="正则表达式实例"></a>正则表达式实例</h3><p><strong>一个字符串其实就是一个简单的正则表达式</strong>，例如 Hello World 正则表达式匹配 “Hello World” 字符串。</p>
+<p><strong><code>.（点号）</code>也是一个正则表达式，它匹配<code>任何一个字符</code>如：”a” 或 “1”。</strong></p>
 <p>下表列出了一些正则表达式的实例及描述：<br><img src="https://cdn.jsdelivr.net/gh/Kanbaraleo/imgs/images/TIM%E5%9B%BE%E7%89%8720200416204116.png" alt=""></p>
+<p><strong><code>java.util.regex 包</code> (注意引入该包) 主要包括以下<code>三个类</code>：</strong></p>
+<ul>
+<li><strong>Pattern 类：</strong><br><strong>pattern <code>对象是一个正则表达式的编译表示</code>。Pattern 类<code>没有公共构造方法</code>。要创建一个 Pattern 对象，你必须首先<code>调用其公共静态编译方法</code>，它返回一个 Pattern 对象。该方法<code>接受一个正则表达式作为它的第一个参数</code>。</strong></li>
+<li><strong>Matcher 类：</strong><br>Matcher 对象是对输入字符串进行解释和匹配操作的引擎。与Pattern 类一样，Matcher 也没有公共构造方法。你<strong>需要调用 <code>Pattern</code>对象的 <code>matcher</code>方法<code>来</code>获得一个 Matcher 对象`。</strong></li>
+<li>PatternSyntaxException：<br>PatternSyntaxException 是一个非强制异常类，它表示一个正则表达式模式中的语法错误。</li>
+</ul>
+<p>以下实例中使用了正则表达式 .<em>runoob.</em> 用于查找字符串中是否包了 runoob 子串：</p>
+<pre><code>import java.util.regex.*;
+
+class RegexExample1{
+   public static void main(String args[]){
+      String content = "I am noob " +
+        "from runoob.com.";
+
+      String pattern = ".*runoob.*";  //定义正则表达式，.*表示零次或多次匹配前面的任意字符
+
+      boolean isMatch = Pattern.matches(pattern, content);   //public boolean matches() 尝试将整个区域与模式匹配。
+      System.out.println("字符串中是否包含了 'runoob' 子字符串? " + isMatch);
+   }
+}</code></pre><p>实例输出结果为：</p>
+<pre><code>字符串中是否包含了 'runoob' 子字符串? true </code></pre><h3 id="正则表达式语法"><a href="#正则表达式语法" class="headerlink" title="正则表达式语法"></a>正则表达式语法</h3><p>在其他语言中，\ 表示：我想要在正则表达式中插入一个普通的（字面上的）反斜杠，请不要给它任何特殊的意义。</p>
+<p><strong>在 Java 中，\ 表示：我要插入一个<code>正则表达式的反斜线</code>，所以<code>其后的字符具有特殊的意义</code>。</strong></p>
+<p>所以，在其他的语言中（如Perl），一个反斜杠 \ 就足以具有转义的作用，而在 <strong>Java 中正则表达式中则需要有<code>两个反斜杠</code>才能被<code>解析为其他语言中的转义作用</code>。也可以简单的理解在 <code>Java 的正则表达式中，</code>两个 \ 代表<code>其他语言中的</code>一个 `，这也就是为什么表示<code>一位数字</code>的正则表达式是 <code>\\d</code>，而表示一个普通的<code>反斜杠是 \\\\</code>。</strong></p>
+<p><a href="https://www.runoob.com/java/java-regular-expressions.html" target="_blank" rel="noopener">字符说明参考</a></p>
+<h3 id="Matcher-类的方法"><a href="#Matcher-类的方法" class="headerlink" title="Matcher 类的方法"></a>Matcher 类的方法</h3><h4 id="start-和-end-方法"><a href="#start-和-end-方法" class="headerlink" title="start 和 end 方法"></a>start 和 end 方法</h4><p>下面是一个对单词 “cat” 出现在输入字符串中出现次数进行计数的例子： </p>
+<pre><code>import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class RegexMatches
+{
+    private static final String REGEX = "\\bcat\\b";
+    // 按指定模式在字符串查找
+    private static final String INPUT =
+                                    "cat cat cat cattie cat";
+
+    public static void main( String args[] ){
+       Pattern p = Pattern.compile(REGEX);// 调用其公共静态编译方法compile()创建 Pattern 对象
+       Matcher m = p.matcher(INPUT); // 获取 matcher 对象
+       int count = 0;
+
+       while(m.find()) //public boolean find() 尝试查找与该模式匹配的输入序列的下一个子序列。
+       {
+         count++;
+         System.out.println("Match number "+count);
+         System.out.println("start(): "+m.start());//返回以前匹配的初始索引。
+         System.out.println("end(): "+m.end()); //返回最后匹配字符之后的偏移量(最后匹配字符索引加1)。
+      }
+   }
+}</code></pre><p>以上实例编译运行结果如下：</p>
+<pre><code>Match number 1
+start(): 0
+end(): 3
+Match number 2
+start(): 4
+end(): 7
+Match number 3
+start(): 8
+end(): 11
+Match number 4
+start(): 19
+end(): 22</code></pre><p><strong><code>Start</code>方法返回在以前的匹配操作期间，由给定组所捕获的<code>子序列的初始索引</code>，<code>end</code>方法<code>最后一个匹配字符的索引加 1</code>。</strong> </p>
+<p><strong>下面的例子讲String类的matcheS()方法</strong>，校验QQ号，要求：必须是5~15位数字，0不能开头。没有正则表达式之前</p>
+<pre><code>public class regex {
+    public static void main(String[] args) {
+            checkQQ2("0123134");
+    }
+    public static void checkQQ2(String qq) {                                                            
+            String reg = "[1-9][0-9]{4,14}";                  
+            System.out.println(qq.matches(reg)?"合法qq":"非法qq");                                 
+    }
+}</code></pre><p><strong>注意：<code>boolean matches(String regex)</code>告知此字符串是否匹配给定的正则表达式。</strong></p>
+<p><strong><code>String.matches(regex)</code>方法本质调用了<code>Pattern.matches(regex, str)</code>，而该方法调<code>Pattern.compile(regex).matcher(input).matches()方法</code>，而<code>Matcher.matches()</code>方法试图将<code>整个区域与模式匹配</code>，如果匹配成功，则可以通过开始、结束和组方法获得更多信息。</strong></p>
+<p><strong>总的来说，<code>String.matches(regex)</code>，<code>Pattern.matches(regex, str)</code>，<code>Matcher.matches()</code>都是<code>全局匹配</code>的，相当于”^regex$”的正则匹配结果。如果<code>不想使用全局匹配</code>则可以使用<code>Matcher.find()</code>方法进行<code>部分查找</code>。</strong></p>
+<pre><code>public boolean find() 
+尝试查找与该模式匹配的输入序列的下一个子序列。
+
+public boolean find(int start）
+重置此匹配器，然后尝试查找匹配该模式、从指定索引开始的输入序列的下一个子序列。</code></pre><h2 id="Java-方法-非常重要"><a href="#Java-方法-非常重要" class="headerlink" title="Java 方法(非常重要)"></a>Java 方法(非常重要)</h2><p>在前面几个章节中我们经常使用到 System.out.println()，那么它是什么呢？</p>
+<ul>
+<li>println() 是一个方法。</li>
+<li>System 是系统类。</li>
+<li>out 是标准输出对象。</li>
+</ul>
+<p>这句话的用法是<strong>调用<code>系统类 System</code> 中的<code>标准输出对象 out</code> 中的<code>方法 println()</code>。</strong> </p>
+<h3 id="那么什么是方法呢？"><a href="#那么什么是方法呢？" class="headerlink" title="那么什么是方法呢？"></a>那么什么是方法呢？</h3><p><strong>Java方法是语句的集合</strong>，它们在一起执行一个功能。</p>
+<ul>
+<li>方法是解决一类问题的步骤的有序组合</li>
+<li>方法包含于类或对象中</li>
+<li>方法在程序中被创建，在其他地方被引用</li>
+</ul>
+<h3 id="方法的优点"><a href="#方法的优点" class="headerlink" title="方法的优点"></a>方法的优点</h3><ol>
+<li>使程序变得更简短而清晰。</li>
+<li>有利于程序维护。</li>
+<li>可以提高程序开发的效率。</li>
+<li>提高了代码的重用性。</li>
+</ol>
+<h3 id="方法的命名规则"><a href="#方法的命名规则" class="headerlink" title="方法的命名规则"></a>方法的命名规则</h3><p><strong>方法的名字的第一个单词应以<code>小写字母作为开头</code>，后面的单词则用<code>大写字母开头写</code>，不使用连接符。例如：addPerson。</strong></p>
+<h3 id="方法的定义"><a href="#方法的定义" class="headerlink" title="方法的定义"></a>方法的定义</h3><p>一般情况下，定义一个方法包含以下语法：</p>
+<pre><code>修饰符 返回值类型 方法名(参数类型 参数名){
+    ...
+    方法体
+    ...
+    return 返回值;
+}</code></pre><p><strong>方法包含一个<code>方法头</code>和一个<code>方法体</code>。</strong>下面是一个方法的所有部分：</p>
+<ul>
+<li><strong>修饰符</strong>：修饰符，这是可选的，告诉编译器如何调用该方法。定义了该方法的访问类型。</li>
+<li><strong>返回值类型</strong> ：<strong>方法<code>可能</code>会返回值。</strong>returnValueType 是方法返回值的数据类型。有些方法执行所需的操作，但没有返回值。在这种情况下，returnValueType 是关键字void。</li>
+<li><strong>方法名</strong>：是方法的实际名称。方法名和参数表共同构成方法签名。</li>
+<li><strong>参数类型</strong>：参数像是一个占位符。当方法被调用时，传递值给参数。这个值被称为实参或变量。参数列表是指方法的参数类型、顺序和参数的个数。参数是可选的，方法可以不包含任何参数。</li>
+<li><strong>方法体</strong>：方法体包含具体的语句，定义该方法的功能。</li>
+</ul>
+<img src="//www.runoob.com/wp-content/uploads/2013/12/12-130Q1220955916.jpg">
+
+<p><strong>注意： 在一些其它语言中方法指<code>过程</code>和<code>函数</code>。一个<code>返回非void类型</code>返回值的方法称为<code>函数</code>；一个<code>返回void类型</code>返回值的方法叫做<code>过程</code>。</strong> </p>
+<p>下面的方法包含 2 个参数 num1 和 num2，它返回这两个参数的最大值。 </p>
+<pre><code>/** 返回两个整型变量数据的较大值 */
+public static int max(int num1, int num2) {
+   int result;
+   if (num1 &gt; num2)
+      result = num1;
+   else
+      result = num2;
+
+   return result; 
+}</code></pre><h3 id="方法调用"><a href="#方法调用" class="headerlink" title="方法调用"></a>方法调用</h3><p><strong>Java 支持两种调用方法的方式，根据<code>方法是否返回值</code>来选择。</strong> </p>
+<p><strong>当程序<code>调用一个方法</code>时，程序的<code>控制权交给了被调用的方法</code>。当被调用方法的<code>返回语句执行</code>或者<code>到达方法体闭括号时候</code>交还控制权给程序。</strong> </p>
+<p><strong>当方法<code>返回一个值</code>的时候，方法<code>调用通常被当做一个值</code>。</strong>例如： </p>
+<pre><code>int larger = max(30, 40);</code></pre><p><strong>如果方法<code>返回值是void</code>，方法<code>调用一定是一条语句</code>。</strong>例如，方法println返回void。下面的调用是个语句： </p>
+<pre><code>System.out.println("欢迎访问菜鸟教程！");</code></pre><h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><p>下面的例子演示了如何定义一个方法，以及如何调用它：</p>
+<pre><code>public class TestMax {
+   /** 主方法 */
+   public static void main(String[] args) {
+      int i = 5;
+      int j = 2;
+      int k = max(i, j);
+      System.out.println( i + " 和 " + j + " 比较，最大值是：" + k);
+   }
+
+   /** 返回两个整数变量较大的值 */
+   public static int max(int num1, int num2) {
+      int result;
+      if (num1 &gt; num2)
+         result = num1;
+      else
+         result = num2;
+
+      return result; 
+   }
+}</code></pre><p>以上实例编译运行结果如下：</p>
+<pre><code>5 和 2 比较，最大值是：5</code></pre><p>这个程序包含 main 方法和 max 方法。<strong><code>main</code> 方法是被 <code>JVM 调用</code>的</strong>，除此之外，main 方法和其它方法没什么区别。 </p>
+<p><strong><code>main 方法的头部是不变的</code>，如例子所示，带修饰符 <code>public 和 static</code>,<code>返回 void 类型值</code>，<code>方法名字是 main</code>,此外带个一个 String[] 类型参数。<code>String[]</code> 表明参数是<code>字符串数组</code>。</strong> </p>
+<h3 id="通过值传递参数"><a href="#通过值传递参数" class="headerlink" title="通过值传递参数"></a>通过值传递参数</h3><p>传递两个参数调用方法。有趣的是，<strong>方法被调用后，实参的值并没有改变。(值传递，并非引用传递)</strong> </p>
+<h3 id="方法的重载"><a href="#方法的重载" class="headerlink" title="方法的重载"></a>方法的重载</h3><p>上面使用的max方法仅仅适用于int型数据。但如果你想得到两个浮点类型数据的最大值呢？</p>
+<p><strong>解决方法是创建另一个有<code>相同名字</code>但<code>参数不同</code>的方法</strong>，如下面代码所示：</p>
+<pre><code>public static double max(double num1, double num2) {
+  if (num1 &gt; num2)
+    return num1;
+  else
+    return num2;
+}</code></pre><p>如果你调用max方法时传递的是int型参数，则 int型参数的max方法就会被调用；</p>
+<ul>
+<li>如果传递的是double型参数，则double类型的max方法体会被调用，这叫做<strong>方法重载</strong>； </li>
+<li>就是说<strong>一个类的两个方法拥有<code>相同的名字</code>，但是有<code>不同的参数列表</code>。</strong></li>
+<li><strong>Java编译器根据<code>方法签名</code>判断哪个方法应该被调用。</strong> </li>
+<li>方法重载可以让程序更清晰易读。执行密切相关任务的方法应该使用相同的名字。 </li>
+<li><strong>重载的方法<code>必须拥有不同的参数列表</code>,方法的<code>返回类型、修饰符</code>可以相同，也可不同。</strong></li>
+</ul>
+<h3 id="方法重写-注意与重载区分"><a href="#方法重写-注意与重载区分" class="headerlink" title="方法重写(注意与重载区分)"></a>方法重写(注意与重载区分)</h3><p>在Java和其他一些高级面向对象的编程语言中，<strong>子类可继承父类中的方法，而不需要重新编写相同的方法。但有时子类并不想原封不动地继承父类的方法，而是想作一定的修改，这就需要采用方法的重写。<code>方法重写</code>又称<code>方法覆盖</code>。</strong></p>
+<p><strong>若子类中的方法与父类中的<code>某一方法</code>具有相同的<code>方法名</code>、<code>返回类型</code>和<code>参数表</code>，则新方法将<code>覆盖原有的方法</code>。 如需<code>父类中原有的方法</code>，可使用<code>super</code>关键字，该关键字引用了<code>当前类的父类</code>。</strong></p>
+<p>关于方法重写的一些特性：</p>
+<ul>
+<li>发生方法<strong>重写的两个方法<code>返回值</code>、<code>方法名</code>、<code>参数列表</code>必须<code>完全一致</code>(子类重写父类的方法)</strong></li>
+<li>子类抛出的异常下不能超过父类相应方法抛出的异常(<strong>子类异常不能大于父类异常</strong>)</li>
+<li>子类<strong><code>方法</code>的访问级别<code>不能低于</code>父类<code>相应方法</code>的访问级别</strong>(子类访问级别不能低于父类访问级别)</li>
+</ul>
+<p>根据2，3条可以确定第一条，子类重写父类方法的返回值类型不能大于父类方法的返回值类型，即是说子类方法的返回值必须和父类方法的返回值相同或是其子类。</p>
+<p><strong>注意：</strong></p>
+<ul>
+<li>方法重写与方法重载不同，<strong>方法的<code>重载</code>是方法的<code>参数个数或类型不同</code>，<code>方法名相同</code>。</strong></li>
+<li><strong>方法重写是要注意权限的问题，<code>子类中的权限不能小于父类的权限</code>，当父类的权限为<code>private</code>时，<code>子类无法继承</code>。也就<code>无法产生所谓的重写</code>。</strong></li>
+<li>修饰符高低：private &lt; 默认修饰符 &lt; protected&lt; public</li>
+</ul>
+<h3 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h3><p>当一个对象被创建时候，<strong>构造方法用来<code>初始化该对象</code>。构造方法和它<code>所在类的名字相同</code>，但构造方法<code>没有返回值</code>。</strong></p>
+<p><strong><code>通常</code>会使用构造方法给一个类的<code>实例变量赋初值</code></strong>，或者执行其它必要的步骤来创建一个完整的对象。 </p>
+<p>不管你是否自定义构造方法，所有的类都有构造方法，<strong>因为Java自动提供了一个默认构造方法，<code>默认构造方法的访问修改符</code>和<code>类的访问修改符</code>相同(类为 public，构造函数也为 public；类改为 protected，构造函数也改为 protected)。</strong> </p>
+<p><strong>一旦你定义了自己的构造方法，默认构造方法就会失效。</strong> </p>
+<h4 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h4><p>下面是一个使用构造方法的例子：</p>
+<pre><code>// 一个简单的构造函数
+class MyClass {
+  int x;
+
+  // 以下是构造函数
+  MyClass(int i ) {
+    x = i;
+  }
+}</code></pre><p>你可以像下面这样调用构造方法来初始化一个对象：</p>
+<pre><code>public class ConsDemo {
+  public static void main(String args[]) {
+    MyClass t1 = new MyClass( 10 );
+    MyClass t2 = new MyClass( 20 );
+    System.out.println(t1.x + " " + t2.x);
+  }
+}</code></pre><h3 id="可变参数"><a href="#可变参数" class="headerlink" title="可变参数"></a>可变参数</h3><p>JDK 1.5 开始，<strong>Java支持传递<code>同类型</code>的<code>可变参数</code>给一个方法。</strong></p>
+<p>在计算机程序设计，<strong>一个可变参数函数是指一个函数拥有不定引数，即是它接受一个可变数目的参数。</strong></p>
+<p>简单来说，就是<strong>函数的参数<code>个数可变</code>，参数<code>类型不定</code>的函数。 (在Java中类型固定!!!!)</strong></p>
+<p>方法的可变参数的声明如下所示：</p>
+<pre><code>typeName... parameterName</code></pre><p><strong>在方法声明中，在指定参数<code>类型后加一个省略号(...)</code> 。</strong></p>
+<p><strong>一个方法中<code>只能指定一个</code>可变参数，它<code>必须是方法的最后一个参数</code>。任何普通的参数必须在它之前声明。</strong> </p>
+<pre><code>public class VarargsDemo {
+    public static void main(String args[]) {
+        // 调用可变参数的方法
+        printMax(34, 3, 3, 2, 56.5);
+        printMax(new double[]{1, 2, 3});
+    }
+
+    public static void printMax( double... numbers) //注意为静态方法，否则main()无法引用
+    {
+        if (numbers.length == 0) {
+            System.out.println("No argument passed");
+            return;
+        }
+
+        double result = numbers[0];
+
+        for (int i = 1; i &lt;  numbers.length; i++){
+            if (numbers[i] &gt;  result) {
+                result = numbers[i];
+            }
+        }
+        System.out.println("The max value is " + result);
+    }
+}</code></pre><p>以上实例编译运行结果如下：</p>
+<pre><code>The max value is 56.5
+The max value is 3.0</code></pre><h3 id="finalize-方法"><a href="#finalize-方法" class="headerlink" title="finalize() 方法"></a>finalize() 方法</h3><p><a href="https://www.runoob.com/java/java-methods.html" target="_blank" rel="noopener">方法具体请参考，此处不予说明</a></p>
+<p><strong>Java 的<code>内存回收</code>可以由 <code>JVM</code> 来自动完成。</strong>如果你想手动使用，则可以使用上面的方法。 </p>
+<h2 id="Java-流-Stream-、文件-File-和IO"><a href="#Java-流-Stream-、文件-File-和IO" class="headerlink" title="Java 流(Stream)、文件(File)和IO"></a>Java 流(Stream)、文件(File)和IO</h2><p><strong><code>Java.io</code>包几乎包含了所有操作输入、输出需要的类。</strong>所有这些流类代表了输入源和输出目标。</p>
+<p>Java.io 包中的流支持很多种格式，比如：基本类型、对象、本地化字符集等等。</p>
+<p><strong>一个<code>流</code>可以理解为一个<code>数据的序列</code>。<code>输入流</code>表示<code>从一个源读取数据</code>，<code>输出流</code>表示<code>向一个目标写数据</code>。</strong> </p>
+<p>Java 为 I/O 提供了强大的而灵活的支持，使其更广泛地应用到文件传输和网络编程中。 </p>
+<p><strong>JDK 5 后的版本我们也可以使用 Java <code>Scanner</code> 类来<code>获取控制台的输入</code>。</strong></p>
+<h3 id="控制台输出"><a href="#控制台输出" class="headerlink" title="控制台输出"></a>控制台输出</h3><p>Java中的<strong>输出语句有以下四种</strong>：</p>
+<pre><code>System.out.println(1111);//换行打印
+
+System.out.print(1111);//不换行打印
+
+System.out.write(2222);//字节输出
+
+System.out.printf("%+8.3f\n", 3.14);//按格式输出</code></pre><ul>
+<li><strong>System.out.println(); 是<code>最常用</code>的输出语句，它会把括号里的<code>内容转换成字符串</code>输出到输出窗口（控制台），<code>并且换行</code>，当输出的是一个<code>基本数据类型</code>时，会自动转换成<code>字符串</code>，如果输出的是一个<code>对象</code>，会自动<code>调用对象的toString();方法</code>，将返回值输出到控制台</strong></li>
+<li>System.out.print(); 与第一个很相似，<strong>区别就是上一个输出后会换行，而这个命令<code>输出后并不换行</code>。</strong></li>
+<li>System.out.write(); 并不常用</li>
+<li>System.out.printf(); 这个方法延续了C语言的输出方式，通过格式化文本和参数列表输出。</li>
+</ul>
+<h3 id="读写文件"><a href="#读写文件" class="headerlink" title="读写文件"></a>读写文件</h3><p>如前所述，一个流被定义为一个数据序列。输入流用于从源读取数据，输出流用于向目标写数据。 </p>
+<img src="//www.runoob.com/wp-content/uploads/2013/12/iostream2xx.png">
+
+<h3 id="FileInputStream"><a href="#FileInputStream" class="headerlink" title="FileInputStream"></a>FileInputStream</h3><p><strong>该流用于<code>从文件读取数据</code>，它的对象可以用关键字 new 来创建。</strong></p>
+<p>有多种构造方法可用来创建对象。 </p>
+<p>可以使用字符串类型的文件名来创建一个输入流对象来读取文件(<strong>需要文件存在</strong>)：</p>
+<pre><code>InputStream f = new FileInputStream("C:/java/hello");</code></pre><p>也可以<strong>使用一个文件对象来创建一个输入流对象来读取文件。</strong>我们首先得使用 <strong>File() 方法来创建一个文件对象</strong>： </p>
+<pre><code>File f = new File("C:/java/hello");
+InputStream out = new FileInputStream(f);</code></pre><p>创建了InputStream对象，就可以使用下面的方法来读取流或者进行其他的流操作。</p>
+<p><img src="https://i.loli.net/2020/04/17/Vh6Jom7rlWFwbNi.png" alt="one.png"></p>
+<h3 id="FileOutputStream"><a href="#FileOutputStream" class="headerlink" title="FileOutputStream"></a>FileOutputStream</h3><p>该类用来<strong>创建一个文件并向文件中写数据。</strong></p>
+<p><strong>如果该流在打开文件进行输出前，<code>目标文件不存在</code>，那么该流会<code>创建</code>该文件。</strong></p>
+<p>有两个构造方法可以用来创建 FileOutputStream 对象。</p>
+<p>使用字符串类型的文件名来创建一个输出流对象：</p>
+<pre><code>OutputStream f = new FileOutputStream("C:/java/hello")</code></pre><p>也可以使用一个文件对象来创建一个输出流来写文件。我们首先得使用File()方法来创建一个文件对象： </p>
+<pre><code>File f = new File("C:/java/hello");
+OutputStream f = new FileOutputStream(f);</code></pre><p>创建OutputStream 对象完成后，就可以使用下面的方法来写入流或者进行其他的流操作。 </p>
+<p><img src="https://i.loli.net/2020/04/17/wqQf9BLstNOWmcM.png" alt="TIM图片20200417230723.png"></p>
+<p>下面是一个演示 InputStream 和 OutputStream 用法的例子： </p>
+<pre><code>//文件名 :fileStreamTest2.java
+import java.io.*;
+
+public class fileStreamTest2 {
+    public static void main(String[] args) throws IOException {
+
+        File f = new File("a.txt");
+        FileOutputStream fop = new FileOutputStream(f);
+        // 构建FileOutputStream对象,文件不存在会自动新建
+
+        OutputStreamWriter writer = new OutputStreamWriter(fop, "UTF-8");
+        // 构建OutputStreamWriter对象,参数可以指定编码,默认为操作系统默认编码,windows上是gbk
+
+        writer.append("中文输入");
+        // 写入到缓冲区
+
+        writer.append("\r\n");
+        // 换行
+
+        writer.append("English");
+        // 刷新缓存冲,写入到文件,如果下面已经没有写入的内容了,直接close也会写入
+
+        writer.close();
+        // 关闭写入流,同时会把缓冲区内容写入文件,所以上面的注释掉
+
+        fop.close();
+        // 关闭输出流,释放系统资源
+
+        FileInputStream fip = new FileInputStream(f);
+        // 构建FileInputStream对象
+
+        InputStreamReader reader = new InputStreamReader(fip, "UTF-8");
+        // 构建InputStreamReader对象,编码与写入相同
+
+        StringBuffer sb = new StringBuffer();
+        while (reader.ready()) {
+            sb.append((char) reader.read());
+            // 转成char加到StringBuffer对象中
+        }
+        System.out.println(sb.toString());
+        reader.close();
+        // 关闭读取流
+
+        fip.close();
+        // 关闭输入流,释放系统资源
+
+    }
+}</code></pre><h3 id="Java-File类"><a href="#Java-File类" class="headerlink" title="Java File类"></a>Java File类</h3><p>Java文件类以抽象的方式代表文件名和目录路径名。该类<strong>主要用于文件和目录的创建、文件的查找和文件的删除等。</strong> </p>
+<p>File对象代表磁盘中实际存在的文件和目录。通过以下构造方法创建一个File对象。</p>
+<p><strong>通过将给定路径名字符串转换成抽象路径名来创建一个新 File 实例。</strong></p>
+<pre><code>File(String pathname)</code></pre><h4 id="创建目录"><a href="#创建目录" class="headerlink" title="创建目录"></a>创建目录</h4><p>File类中有两个方法可以用来创建文件夹：</p>
+<ul>
+<li><strong>mkdir( )方法创建一个<code>文件夹</code></strong>，成功则返回true，失败则返回false。失败表明File对象指定的路径已经存在，或者由于整个路径还不存在，该文件夹不能被创建。</li>
+<li><strong>mkdirs()方法创建一个<code>文件夹</code>和它的<code>所有父文件夹</code>。</strong></li>
+</ul>
+<p>下面的例子<strong>创建 “/tmp/user/java/bin”文件夹</strong>：</p>
+<pre><code>import java.io.File;
+
+public class CreateDir {
+    public static void main(String args[]) {
+        String dirname = "/tmp/user/java/bin";
+        File d = new File(dirname);
+        // 现在创建目录
+        d.mkdirs();
+    }
+}</code></pre><h4 id="读取目录"><a href="#读取目录" class="headerlink" title="读取目录"></a>读取目录</h4><p><strong>一个目录其实就是一个 File 对象</strong>，它包含其他文件和文件夹。 </p>
+<p>如果创建一个 <strong>File 对象并且它是一个<code>目录</code>，那么调用 <code>isDirectory()</code> 方法会返回 true。</strong> </p>
+<p>可以通过调用该对象上的 <strong>list() 方法，来提取它包含的<code>文件和文件夹的列表</code>。</strong> </p>
+<p>下面展示的例子说明如何使用 list() 方法来检查一个文件夹中包含的内容：</p>
+<pre><code>import java.io.File;
+
+public class DirList {
+    public static void main(String args[]) {
+        String dirname = "/tmp";
+        File f1 = new File(dirname);
+        if (f1.isDirectory()) {
+            System.out.println("目录 " + dirname);
+            String s[] = f1.list();
+            for (int i = 0; i &lt; s.length; i++) {
+                File f = new File(dirname + "/" + s[i]);
+                if (f.isDirectory()) {
+                    System.out.println(s[i] + " 是一个目录");
+                } else {
+                    System.out.println(s[i] + " 是一个文件");
+                }
+            }
+        } else {
+            System.out.println(dirname + " 不是一个目录");
+        }
+    }
+}</code></pre><h4 id="删除目录或文件"><a href="#删除目录或文件" class="headerlink" title="删除目录或文件"></a>删除目录或文件</h4><p><strong>删除文件可以使用 <code>java.io.File.delete()</code>方法。</strong></p>
+<p>以下代码会删除目录 /tmp/java/，需要<strong>注意的是当删除某一目录时，必须保证<code>该目录下没有其他文件</code>才能正确删除，否则将删除失败。</strong></p>
+<pre><code>import java.io.File;
+
+public class DeleteFileDemo {
+    public static void main(String args[]) {
+        // 这里修改为自己的测试目录
+        File folder = new File("/tmp/java/");
+        deleteFolder(folder);
+    }
+
+    // 删除文件及目录
+    public static void deleteFolder(File folder) {
+        File[] files = folder.listFiles();
+        if (files != null) {
+            for (File f : files) {
+                if (f.isDirectory()) {
+                    deleteFolder(f);
+                } else {
+                    f.delete();
+                }
+            }
+        }
+        folder.delete();
+    }
+}</code></pre><h3 id="Java-FileReader类"><a href="#Java-FileReader类" class="headerlink" title="Java FileReader类"></a>Java FileReader类</h3><p><strong><code>FileReader</code>类从<code>InputStreamReader</code>类继承而来。该类<code>按字符</code>读取流中数据。</strong>可以通过<strong>以下几种构造方法</strong>创建需要的对象。 </p>
+<p>在给定从中读取数据的 File 的情况下创建一个新 FileReader。</p>
+<pre><code>FileReader(File file)</code></pre><p>在给定从中读取数据的 FileDescriptor 的情况下创建一个新 FileReader。</p>
+<pre><code>FileReader(FileDescriptor fd) </code></pre><p>在给定从中读取数据的文件名的情况下创建一个新 FileReader。</p>
+<pre><code>FileReader(String fileName)</code></pre><p>创建FIleReader对象成功后，可以参照以下列表里的方法操作文件。</p>
+<p><img src="https://i.loli.net/2020/04/17/pDlmk1bz8Nq3WdX.png" alt="TIM图片20200417232946.png"></p>
+<h3 id="Java-FileWriter类"><a href="#Java-FileWriter类" class="headerlink" title="Java FileWriter类"></a>Java FileWriter类</h3><p>FileWriter 类从 OutputStreamWriter 类继承而来。该类<strong>按字符向流中写入数据</strong>。可以通过以下几种构造方法创建需要的对象。 </p>
+<p>在给出 File 对象的情况下构造一个 FileWriter 对象。</p>
+<pre><code>FileWriter(File file)</code></pre><p>在给出 File 对象的情况下构造一个 FileWriter 对象。</p>
+<pre><code>FileWriter(File file, boolean append)</code></pre><p><strong>参数：</strong></p>
+<ul>
+<li><strong>file</strong>：要写入数据的 File 对象。 </li>
+<li><strong>append</strong>：<strong>如果 append 参数为 <code>true</code>，则将字节写入<code>文件末尾处</code>，相当于<code>追加信息</code>。如果 append 参数为 <code>false</code>, 则写入文件<code>开始处</code>。</strong></li>
+</ul>
+<p>创建FileWriter对象成功后，可以参照以下列表里的方法操作文件。</p>
+<p><img src="https://i.loli.net/2020/04/17/Ts5HDniYABZewLk.png" alt="TIM图片20200417234306.png"></p>
+<p>实例</p>
+<pre><code>import java.io.*;
+
+public class FileRead {
+    public static void main(String args[]) throws IOException {
+        File file = new File("Hello1.txt");
+        // 创建文件
+        file.createNewFile();
+        // creates a FileWriter Object
+        FileWriter writer = new FileWriter(file);
+        // 向文件写入内容
+        writer.write("This\n is\n an\n example\n");
+        writer.flush(); //清空缓冲区并完成文件写入操作
+        writer.close();
+        // 创建 FileReader 对象
+        FileReader fr = new FileReader(file);
+        char[] a = new char[50];
+        fr.read(a); // 读取数组中的内容
+        for (char c : a)
+            System.out.print(c); // 一个一个打印字符
+        fr.close();
+    }
+}</code></pre><p>以上实例编译运行结果如下：</p>
+<pre><code>This
+is
+an
+example</code></pre><h2 id="Java-Scanner-类"><a href="#Java-Scanner-类" class="headerlink" title="Java Scanner 类"></a>Java Scanner 类</h2><p>对于大部分学过C++，C的同学来说，可能有一点陌生，<strong>java是一门面向对象的语言 ，所以它的输入并不是先定义一个变量，再cin它</strong>；java没有提供诸如C/C++中的scanf输入函数，因此从键盘输入并不是一个简单的事情</p>
+<p><strong><code>java.util.Scanner</code> 是 <code>Java5</code> 的<code>新特征</code>，我们可以通过 Scanner 类来<code>获取用户的输入</code>。</strong></p>
+<p>下面是创建 Scanner 对象的基本语法：</p>
+<pre><code>Scanner s = new Scanner(System.in);      //构造Scanner类对象，它附属于标准输入流System.in</code></pre><p>接下来我们演示一个最简单的数据输入，<strong>并通过 <code>Scanner</code> 类的 <code>next()</code> 与 <code>nextLine()</code> 方法<code>获取输入的字符串</code>，在读取前我们一般需要 使用 <code>hasNext</code> 与 <code>hasNextLine</code> 判断<code>是否还有输入的数据</code></strong>：</p>
+<h3 id="使用-next-方法："><a href="#使用-next-方法：" class="headerlink" title="使用 next 方法："></a>使用 next 方法：</h3><pre><code>import java.util.Scanner; 
+
+public class ScannerDemo {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        // 从键盘接收数据
+
+        // next方式接收字符串
+        System.out.println("next方式接收：");
+        // 判断是否还有输入
+        if (scan.hasNext()) {
+            String str1 = scan.next();
+            System.out.println("输入的数据为：" + str1);
+        }
+        scan.close();
+    }
+}</code></pre><p>执行以上程序输出结果为：</p>
+<pre><code>next方式接收：
+run boc
+输入的数据为：run    //可以看到 boc 字符串并未输出</code></pre><h3 id="使用-nextLine-方法："><a href="#使用-nextLine-方法：" class="headerlink" title="使用 nextLine 方法："></a>使用 nextLine 方法：</h3><pre><code>import java.util.Scanner;
+
+public class ScannerDemo {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        // 从键盘接收数据
+
+        // nextLine方式接收字符串
+        System.out.println("nextLine方式接收：");
+        // 判断是否还有输入
+        if (scan.hasNextLine()) {
+            String str2 = scan.nextLine();
+            System.out.println("输入的数据为：" + str2);
+        }
+        scan.close();
+    }
+}</code></pre><p>执行以上程序输出结果为：</p>
+<pre><code>next方式接收：
+run com
+输入的数据为：run com    //可以看到 com 字符串输出。</code></pre><h3 id="next-与-nextLine-区别"><a href="#next-与-nextLine-区别" class="headerlink" title="next() 与 nextLine() 区别"></a>next() 与 nextLine() 区别</h3><h4 id="next"><a href="#next" class="headerlink" title="next():"></a>next():</h4><ul>
+<li>一定要<strong>读取到有效字符后，<code>回车</code>才可以结束输入</strong></li>
+<li>对输入<strong>有效字符之前遇到的空格，next() 方法会自动将其去掉。</strong> </li>
+<li>只有<strong>输入有效字符后才将其后面输入的空白作为结束符，即空白后的字符不会显示。</strong> </li>
+<li><strong>next() 不能得到带有<code>空格</code>的字符串。</strong></li>
+</ul>
+<h4 id="nextLine-："><a href="#nextLine-：" class="headerlink" title="nextLine()："></a>nextLine()：</h4><ul>
+<li><strong><code>以Enter为结束符</code>,也就是说 nextLine()方法返回的是输入<code>回车之前的所有字符</code>。</strong> </li>
+<li><strong>可以获得空白。</strong></li>
+</ul>
+<p>如果要<strong>输入 <code>int 或 float</code> 类型的数据，在 Scanner 类中也有支持，但是在输入之前最好先使用 <code>hasNextXxx()</code> 方法进行验证，再使用 <code>nextXxx()</code>来读取：</strong></p>
+<pre><code>import java.util.Scanner;
+
+public class ScannerDemo {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        // 从键盘接收数据
+        int i = 0;
+        float f = 0.0f;
+        System.out.print("输入整数：");
+        if (scan.hasNextInt()) {
+            // 判断输入的是否是整数
+            i = scan.nextInt();
+            // 接收整数
+            System.out.println("整数数据：" + i);
+        } else {
+            // 输入错误的信息
+            System.out.println("输入的不是整数！");
+        }
+        System.out.print("输入小数：");
+        if (scan.hasNextFloat()) {
+            // 判断输入的是否是小数
+            f = scan.nextFloat();
+            // 接收小数
+            System.out.println("小数数据：" + f);
+        } else {
+            // 输入错误的信息
+            System.out.println("输入的不是小数！");
+        }
+        scan.close();     //结束时使用close();方法关闭对象。
+    }
+}</code></pre><p>执行以上程序输出结果为：</p>
+<pre><code>输入整数：1
+整数数据：1
+输入小数：1.1
+小数数据：1.1</code></pre><p>以下实例我们可以<strong>输入多个数字，并求其<code>总和</code>与<code>平均数</code>，每输入一个数字用<code>回车确认</code>，通过输入<code>非数字来结束输入</code>并输出执行结果</strong>：</p>
+<pre><code>import java.util.Scanner;
+
+class ScannerDemo {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+        double sum = 0;
+        int m = 0;
+
+        while (scan.hasNextDouble()) {
+            double x = scan.nextDouble();
+            m = m + 1;
+            sum = sum + x;
+        }
+
+        System.out.println(m + "个数的和为" + sum);
+        System.out.println(m + "个数的平均值是" + (sum / m));
+        scan.close();    //结束时使用close();方法关闭对象。
+    }
+}</code></pre><p>执行以上程序输出结果为：</p>
+<pre><code>12
+23
+15
+21.4
+end     //输入end结束输入
+4个数的和为71.4
+4个数的平均值是17.85</code></pre><h2 id="Java-异常处理"><a href="#Java-异常处理" class="headerlink" title="Java 异常处理"></a>Java 异常处理</h2><p>异常是程序中的一些错误，但并不是所有的错误都是异常，并且错误有时候是可以避免的。 </p>
+<p>异常发生的原因有很多，通常包含以下几大类：</p>
+<ul>
+<li><strong>用户输入了非法数据。</strong></li>
+<li>要打开的文件不存在。</li>
+<li>网络通信时连接中断，或者JVM内存溢出。</li>
+</ul>
+<p>这些异常<strong>有的是因为用户错误引起，有的是程序错误引起的，还有其它一些是因为物理错误引起的。</strong></p>
+<p>要理解Java异常处理是如何工作的，你需要掌握以下<strong>三种类型的异常</strong>：</p>
+<ul>
+<li>检查性异常：<strong>最具代表的检查性异常是<code>用户错误</code>或<code>问题</code>引起的异常，这是程序员无法预见的。</strong>例如要打开一个不存在文件时，一个异常就发生了，这些异常在编译时不能被简单地忽略。</li>
+<li>运行时异常：<strong>运行时异常是可能被程序员避免的异常。与检查性异常相反，运行时异常<code>可以在编译时被忽略</code>。</strong></li>
+<li>错误：<strong>错误不是异常，而是脱离程序员控制的问题。</strong>错误在代码中通常被忽略。例如，当栈溢出时，一个错误就发生了，它们在编译也检查不到的。</li>
+</ul>
+<p><strong>注意</strong>：</p>
+<ul>
+<li><strong>检查性异常(非运行时异常): <code>不处理编译不能通过</code></strong> </li>
+</ul>
+<img src="//www.runoob.com/wp-content/uploads/2018/08/697611-20170620140556085-547309633.png">
+
+<ul>
+<li><strong>非检查性异常(运行时异常): <code>不处理编译可以通过</code>，如果有抛出直接抛到控制台</strong> </li>
+<li><img src="//www.runoob.com/wp-content/uploads/2018/08/697611-20170620141139913-1638456043.png">
+
+</li>
+</ul>
+<h3 id="Exception-类的层次"><a href="#Exception-类的层次" class="headerlink" title="Exception 类的层次"></a>Exception 类的层次</h3><p><strong>所有的异常类是从 <code>java.lang.Exception</code> 类<code>继承的子类</code>。</strong></p>
+<p>Exception 类是 Throwable 类的子类。除了Exception类外，Throwable还有一个子类Error 。 </p>
+<p><strong>Java 程序通常不捕获错误。</strong>错误一般发生在严重故障时，它们在Java程序处理的范畴之外。 </p>
+<p><strong><code>Error</code> 用来指示<code>运行时环境发生的错误</code>。</strong></p>
+<p><strong>异常类有两个主要的子类：<code>IOException</code> 类和 <code>RuntimeException</code> 类。</strong></p>
+<img src="//www.runoob.com/wp-content/uploads/2013/12/12-130Q1234I6223.jpg">
+
+<h3 id="Java-内置异常类"><a href="#Java-内置异常类" class="headerlink" title="Java 内置异常类"></a>Java 内置异常类</h3><p>Java 语言<strong>定义了一些异常类在 <code>java.lang</code> 标准包中。</strong> </p>
+<p>标准运行时异常类的子类是最常见的异常类。<strong>由于 java.lang 包是默认加载到所有的 Java 程序的，所以<code>大部分</code>从运行时异常类继承而来的异常都可以<code>直接使用</code>。</strong> </p>
+<p>常见的一些<strong>非检查性异常</strong></p>
+<pre><code>ArrayIndexOutOfBoundsException     用非法索引访问数组时抛出的异常。如果索引为负或大于等于数组大小，则该索引为非法索引。
+IndexOutOfBoundsException          指示某排序索引（例如对数组、字符串或向量的排序）超出范围时抛出。
+NullPointerException               当应用程序试图在需要对象的地方使用 null 时，抛出该异常
+StringIndexOutOfBoundsException    此异常由 String 方法抛出，指示索引或者为负，或者超出字符串的大小。</code></pre><p>常见的检查性异常类</p>
+<pre><code>ClassNotFoundException             应用程序试图加载类时，找不到相应的类，抛出该异常。</code></pre><p>更多异常类请访问：<a href="https://www.runoob.com/java/java-exceptions.html" target="_blank" rel="noopener">网址</a></p>
+<h3 id="捕获异常"><a href="#捕获异常" class="headerlink" title="捕获异常"></a>捕获异常</h3><p><strong>使用 try 和 catch 关键字可以<code>捕获异常</code>。try/catch 代码块放在<code>异常可能发生</code>的地方。</strong> </p>
+<p>try/catch代码块中的代码称为<strong>保护代码</strong>，使用 try/catch 的语法如下</p>
+<pre><code>try
+{
+   // 程序代码
+}catch(ExceptionName e1)
+{
+   //Catch 块
+}</code></pre><p><strong>Catch 语句包含要<code>捕获异常类型的声明</code>。当保护代码块中发生一个异常时，try 后面的 catch 块就会被检查。</strong></p>
+<p><strong>如果发生的<code>异常包含在 catch 块中</code>，异常会被<code>传递到该 catch 块</code>，这和传递一个参数到方法是一样。</strong> </p>
+<h4 id="实例-1"><a href="#实例-1" class="headerlink" title="实例"></a>实例</h4><p>下面的例子中声明有两个元素的一个数组，<strong>当代码试图访问数组的第三个元素的时候就会抛出一个异常。</strong></p>
+<pre><code>// 文件名 : ExcepTest.java
+import java.io.*;
+public class ExcepTest{
+
+   public static void main(String args[]){
+      try{
+         int a[] = new int[2];
+         System.out.println("Access element three :" + a[3]);
+      }catch(ArrayIndexOutOfBoundsException e){
+         System.out.println("Exception thrown  :" + e);    //访问数组下标越界
+      }
+      System.out.println("Out of the block");
+   }
+}</code></pre><p>以上代码编译运行输出结果如下：</p>
+<pre><code>Exception thrown  :java.lang.ArrayIndexOutOfBoundsException: 3
+Out of the block</code></pre><h3 id="多重捕获块"><a href="#多重捕获块" class="headerlink" title="多重捕获块"></a>多重捕获块</h3><p><strong>一个 <code>try 代码块</code>后面跟随<code>多个 catch 代码块</code>的情况就叫<code>多重捕获</code>。</strong> </p>
+<p>多重捕获块的语法如下所示：</p>
+<pre><code>try{
+   // 程序代码
+}catch(异常类型1 异常的变量名1){
+  // 程序代码
+}catch(异常类型2 异常的变量名2){
+  // 程序代码
+}catch(异常类型2 异常的变量名2){
+  // 程序代码
+}</code></pre><h3 id="finally关键字"><a href="#finally关键字" class="headerlink" title="finally关键字"></a>finally关键字</h3><p><strong>无论是否发生异常，finally 代码块中的代码<code>总会被执行</code>。</strong> </p>
+<p><strong>在 finally 代码块中，可以运行<code>清理类型等收尾善后性质</code>的语句。</strong></p>
+<p><strong>finally 代码块出现在 <code>catch</code> 代码块<code>最后</code></strong>，语法如下：</p>
+<pre><code>try{
+  // 程序代码
+}catch(异常类型1 异常的变量名1){
+  // 程序代码
+}catch(异常类型2 异常的变量名2){
+  // 程序代码
+}finally{
+  // 程序代码
+}</code></pre><p>注意：</p>
+<ul>
+<li><strong>catch 不能独立于 try 存在。</strong></li>
+<li><strong>在 try/catch 后面<code>添加 finally 块并非强制性</code>要求的。</strong></li>
+<li><strong>try 代码后不能既没 <code>catch</code> 块也没 <code>finally</code> 块。</strong></li>
+<li><strong>try, catch, finally 块之间<code>不能添加任何代码</code>。</strong></li>
+</ul>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -1088,7 +1749,7 @@ int day = c1.get(Calendar.DAY_OF_WEEK);</code></pre><h2 id="Java-正则表达式
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://kanbaraleo.github.io/2020/04/04/java-xue-xi-er/">http://kanbaraleo.github.io/2020/04/04/java-xue-xi-er/</a>
+                    <a href="http://kanbaraleo.github.io/2020/04/14/java-xue-xi-er/">http://kanbaraleo.github.io/2020/04/14/java-xue-xi-er/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1134,13 +1795,13 @@ int day = c1.get(Calendar.DAY_OF_WEEK);</code></pre><h2 id="Java-正则表达式
                     
                 </div>
                 <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
-                    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/libs/share/css/share.min.css">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
 
 <div id="article-share">
     
     
     <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
-    <script src="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/libs/share/js/social-share.min.js"></script>
+    <script src="/libs/share/js/social-share.min.js"></script>
     
 
     
@@ -1258,10 +1919,10 @@ int day = c1.get(Calendar.DAY_OF_WEEK);</code></pre><h2 id="Java-正则表达式
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1532,8 +2193,8 @@ int day = c1.get(Calendar.DAY_OF_WEEK);</code></pre><h2 id="Java-正则表达式
     </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/libs/valine/av-min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/libs/valine/Valine.min.js"></script>
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
 <script>
     new Valine({
         el: '#vcomments',
@@ -1560,24 +2221,27 @@ int day = c1.get(Calendar.DAY_OF_WEEK);</code></pre><h2 id="Java-正则表达式
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/04/10/java-xue-xi/">
+                <a href="/2020/04/19/java-xue-xi-san/">
                     <div class="card-image">
                         
-                        <img src="/images/1.jpg" class="responsive-img" alt="Java学习">
+                        <img src="/images/6.jpg" class="responsive-img" alt="Java 面向对象">
                         
-                        <span class="card-title">Java学习</span>
+                        <span class="card-title">Java 面向对象</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Java 简介和基础语法Java主要特性
-Java语言是简单的：Java语言的语法与C语言和C++语言很接近，使得大多数程序员很容易学习和使用。另一方面，Java丢弃了C++中很少使用的、很难理解的、令人迷惑的那些特性，如操作符重载、多继承
+                            Java 继承继承是java面向对象编程技术的一块基石，因为它允许创建分等级层次的类。
+继承就是子类继承父类的特征和行为，使得类对象（实例）具有父类的实例域和方法，或子类从父类继承方法，使得子类具有父类相同的行为。
+生活中的继承：
+
+虽然食
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-10
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-19
                         </span>
                         <span class="publish-author">
                             
@@ -1609,23 +2273,25 @@ Java语言是简单的：Java语言的语法与C语言和C++语言很接近，�
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/04/04/hexo-github-da-jian-ge-ren-bo-ke/">
+                <a href="/2020/04/10/java-xue-xi/">
                     <div class="card-image">
                         
-                        <img src="/images/1.jpg" class="responsive-img" alt="搭建博客">
+                        <img src="/images/3.jpg" class="responsive-img" alt="Java学习">
                         
-                        <span class="card-title">搭建博客</span>
+                        <span class="card-title">Java学习</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            搭建博客笔记在B站看到github+hexo搭建个人博客的视频，一时间来了兴趣开始着手搭建。此文章用于记录自己搭建的过程，也算是个小教程，内容集合了一些自己的理解和各路大神（太多，就不一一说了）的讲解。一方面方便自己以后回过头来查看。另一方
+                            Java 简介和基础语法Java在线工具
+Java是由Sun Microsystems公司于1995年5月推出的Java面向对象程序设计语言和Java平台的总称。由James Gosling和同事们共同研发，并在1995年正式推出。
+Jav
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-04
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-10
                             </span>
                         <span class="publish-author">
                             
@@ -1642,16 +2308,8 @@ Java语言是简单的：Java语言的语法与C语言和C++语言很接近，�
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Markdown/">
-                        <span class="chip bg-color">Markdown</span>
-                    </a>
-                    
-                    <a href="/tags/github/">
-                        <span class="chip bg-color">github</span>
-                    </a>
-                    
-                    <a href="/tags/hexo/">
-                        <span class="chip bg-color">hexo</span>
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">Java</span>
                     </a>
                     
                 </div>
@@ -1704,21 +2362,21 @@ Java语言是简单的：Java语言的语法与C语言和C++语言很接近，�
 
 
 <!-- 代码块功能依赖 -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/libs/codeBlock/codeBlockFuction.js"></script>
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
 
 <!-- 代码语言 -->
 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/libs/codeBlock/codeLang.js"></script>
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
 
 
 <!-- 代码块复制 -->
 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/libs/codeBlock/codeCopy.js"></script>
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
 
 
 <!-- 代码块收缩 -->
 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/libs/codeBlock/codeShrink.js"></script>
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
 
 
 <!-- 代码块折行 -->
@@ -1746,7 +2404,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 </div>
 
 
-<script src="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/libs/tocbot/tocbot.min.js"></script>
+<script src="/libs/tocbot/tocbot.min.js"></script>
 <script>
     $(function () {
         tocbot.init({
@@ -1840,7 +2498,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">23.8k</span>&nbsp;字
+                class="white-color">40.3k</span>&nbsp;字
             
             
             
@@ -1949,10 +2607,10 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
     </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/js/search.js"></script>
+<script src="/js/search.js"></script>
 <script type="text/javascript">
 $(function () {
-    searchFunc("https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/" + "search.xml", 'searchInput', 'searchResult');
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
 });
 </script>
     <!-- 回到顶部按钮 -->
@@ -1963,12 +2621,12 @@ $(function () {
 </div>
 
 
-    <script src="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/libs/materialize/materialize.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/libs/masonry/masonry.pkgd.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/libs/aos/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/libs/scrollprogress/scrollProgress.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/libs/lightGallery/js/lightgallery-all.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/js/matery.js"></script>
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
 
     <!-- Baidu Analytics -->
 
@@ -1989,10 +2647,10 @@ $(function () {
 </script>
 
     
-    <script src="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/libs/others/clicklove.js" async="async"></script>
+    <script src="/libs/others/clicklove.js" async="async"></script>
     
     
-    <script async src="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/libs/others/busuanzi.pure.mini.js"></script>
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
     
 
 <script type="text/javascript">
@@ -2013,13 +2671,15 @@ $(function () {
     
 
     
+    
+    <script type="text/javascript" size="150" alpha='0.6'
+        zIndex="-1" src="/libs/background/ribbon.min.js" async="async"></script>
+    
 
     
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/libs/background/ribbon-dynamic.js" async="async"></script>
     
     
-    
-    <script src="https://cdn.jsdelivr.net/gh/kanbaraleo/kanbaraleo.github.io/libs/instantpage/instantpage.js" type="module"></script>
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"userConfig":null,"pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":200,"height":600,"hOffset":20,"vOffset":-198},"mobile":{"show":true},"react":{"opacity":1},"dialog":{"enable":true,"hitokoto":true},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/"});</script></body>
