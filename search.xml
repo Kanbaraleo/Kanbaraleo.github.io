@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Java高级教程</title>
+      <link href="/2020/04/23/java-gao-ji-jiao-cheng/"/>
+      <url>/2020/04/23/java-gao-ji-jiao-cheng/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Java-数据结构"><a href="#Java-数据结构" class="headerlink" title="Java 数据结构"></a>Java 数据结构</h2><p>Java工具包提供了强大的数据结构。在Java中的数据结构主要包括以下几种接口和类：</p><ul><li>枚举（Enumeration）</li><li>位集合（BitSet）</li><li>向量（Vector）</li><li>栈（Stack）</li><li>字典（Dictionary）</li><li>哈希表（Hashtable）</li><li>属性（Properties）</li></ul><p>以上这些类是传统遗留的，在Java2中引入了一种新的框架-集合框架(Collection)，我们后面再讨论。</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> Markdown </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Java 面向对象</title>
       <link href="/2020/04/19/java-xue-xi-san/"/>
       <url>/2020/04/19/java-xue-xi-san/</url>
@@ -95,38 +120,11 @@
       
         <tags>
             
-            <tag> Markdown </tag>
-            
             <tag> github </tag>
             
-            <tag> hexo </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>typora-vue-theme主题介绍</title>
-      <link href="/2020/04/02/java-gao-ji-jiao-cheng/"/>
-      <url>/2020/04/02/java-gao-ji-jiao-cheng/</url>
-      
-        <content type="html"><![CDATA[<script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
-      
-      
-      <categories>
-          
-          <category> Markdown </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Typora </tag>
-            
             <tag> Markdown </tag>
+            
+            <tag> hexo </tag>
             
         </tags>
       
@@ -151,11 +149,11 @@
       
         <tags>
             
-            <tag> Markdown </tag>
-            
             <tag> yilia </tag>
             
             <tag> github </tag>
+            
+            <tag> Markdown </tag>
             
         </tags>
       
