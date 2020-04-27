@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Java学习 二, 博客,github,hexo,matery">
+    <meta name="keywords" content="Java教程 二, 博客,github,hexo,matery">
     <meta name="description" content="个人学习网站">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Java学习 二 | Asgard</title>
+    <title>Java教程 二 | Asgard</title>
     <link rel="icon" type="image/png" href="favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -324,7 +324,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Java学习 二</h1>
+                    <h1 class="description center-align post-title">Java教程 二</h1>
                 </div>
             </div>
         </div>
@@ -483,14 +483,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    15.2k
+                    15.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    59 分
+                    62 分
                 </div>
                 
 
@@ -1307,7 +1307,71 @@ The max value is 3.0</code></pre><h3 id="finalize-方法"><a href="#finalize-方
 <p>Java.io 包中的流支持很多种格式，比如：基本类型、对象、本地化字符集等等。</p>
 <p><strong>一个<code>流</code>可以理解为一个<code>数据的序列</code>。<code>输入流</code>表示<code>从一个源读取数据</code>，<code>输出流</code>表示<code>向一个目标写数据</code>。</strong> </p>
 <p>Java 为 I/O 提供了强大的而灵活的支持，使其更广泛地应用到文件传输和网络编程中。 </p>
+<h3 id="读取控制台输入"><a href="#读取控制台输入" class="headerlink" title="读取控制台输入"></a>读取控制台输入</h3><p><strong>Java 的<code>控制台输入</code>由 <code>System.in</code> 完成。</strong></p>
+<p><strong>为了获得一个<code>绑定到控制台的字符流</code>，你可以把 <code>System.in 包装在一个 BufferedReader 对象</code>中来创建一个<code>字符流</code>。</strong></p>
+<p>下面是创建 BufferedReader 的基本语法：</p>
+<pre><code>BufferedReader br = new BufferedReader(new 
+                      InputStreamReader(System.in));</code></pre><p>BufferedReader 对象创建后，我们便可以使用 <strong><code>read()</code> 方法从控制台读取<code>一个字符</code>，或者用 <code>readLine()</code> 方法读取一个<code>字符串</code>。</strong></p>
+<h4 id="从控制台读取多字符输入"><a href="#从控制台读取多字符输入" class="headerlink" title="从控制台读取多字符输入"></a>从控制台读取多字符输入</h4><p>从 BufferedReader 对象读取一个字符要使用 read() 方法，它的语法如下：</p>
+<pre><code>int read( ) throws IOException</code></pre><p><strong>每次调用 read() 方法，它<code>从输入流读取一个字符</code>并把<code>该字符作为整数值返回</code>。 当<code>流结束的时候返回 -1</code>。该方法抛出 IOException。</strong></p>
+<p>下面的程序示范了用 <strong>read() 方法从控制台不断读取字符直到用户输入 “q”</strong>。</p>
+<pre><code>//使用 BufferedReader 在控制台读取字符
+
+import java.io.*;
+
+public class BRRead {
+    public static void main(String args[]) throws IOException {
+        char c;
+        // 使用 System.in 创建 BufferedReader
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("输入字符, 按下 'q' 键退出。");
+        // 读取字符
+        do {
+            c = (char) br.read();
+            System.out.println(c);
+        } while (c != 'q');
+    }
+}</code></pre><p>以上实例编译运行结果如下:</p>
+<pre><code>输入字符, 按下 'q' 键退出。
+runoob
+r
+u
+n
+o
+o
+b
+
+
+q
+q</code></pre><h4 id="从控制台读取字符串"><a href="#从控制台读取字符串" class="headerlink" title="从控制台读取字符串"></a>从控制台读取字符串</h4><p>从标准输入读取一个字符串需要使用 BufferedReader 的 readLine() 方法。</p>
+<p>它的一般格式是：</p>
+<pre><code>String readLine( ) throws IOException</code></pre><p>下面的程序<strong>读取和显示字符行直到你输入了单词”end”</strong>。</p>
+<pre><code>//使用 BufferedReader 在控制台读取字符
+import java.io.*;
+
+public class BRReadLines {
+    public static void main(String args[]) throws IOException {
+        // 使用 System.in 创建 BufferedReader
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String str;
+        System.out.println("Enter lines of text.");
+        System.out.println("Enter 'end' to quit.");
+        do {
+            str = br.readLine();
+            System.out.println(str);
+        } while (!str.equals("end"));
+    }
+}</code></pre><p>以上实例编译运行结果如下:</p>
+<pre><code>Enter lines of text.
+Enter 'end' to quit.
+This is line one
+This is line one
+This is line two
+This is line two
+end
+end</code></pre><blockquote>
 <p><strong>JDK 5 后的版本我们也可以使用 Java <code>Scanner</code> 类来<code>获取控制台的输入</code>。</strong></p>
+</blockquote>
 <h3 id="控制台输出"><a href="#控制台输出" class="headerlink" title="控制台输出"></a>控制台输出</h3><p>Java中的<strong>输出语句有以下四种</strong>：</p>
 <pre><code>System.out.println(1111);//换行打印
 
@@ -1642,6 +1706,10 @@ end     //输入end结束输入
 <p><strong>Java 程序通常不捕获错误。</strong>错误一般发生在严重故障时，它们在Java程序处理的范畴之外。 </p>
 <p><strong><code>Error</code> 用来指示<code>运行时环境发生的错误</code>。</strong></p>
 <p><strong>异常类有两个主要的子类：<code>IOException</code> 类和 <code>RuntimeException</code> 类。</strong></p>
+<ul>
+<li><strong>IOException是输入或输出异常（即写读异常）。</strong></li>
+<li><strong>RuntimeException：运行时异常，这种异常我们不需要处理，完全由虚拟机接管。</strong>比如我们常见的NullPointerException，我们在写程序时不会进行catch或throw。</li>
+</ul>
 <img src="//www.runoob.com/wp-content/uploads/2013/12/12-130Q1234I6223.jpg">
 
 <h3 id="Java-内置异常类"><a href="#Java-内置异常类" class="headerlink" title="Java 内置异常类"></a>Java 内置异常类</h3><p>Java 语言<strong>定义了一些异常类在 <code>java.lang</code> 标准包中。</strong> </p>
@@ -1749,7 +1817,7 @@ Out of the block</code></pre><h3 id="多重捕获块"><a href="#多重捕获块"
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://kanbaraleo.github.io/2020/04/14/java-xue-xi-er/">http://kanbaraleo.github.io/2020/04/14/java-xue-xi-er/</a>
+                    <a href="http://kanbaraleo.github.io/2020/04/14/java-jiao-cheng-er/">http://kanbaraleo.github.io/2020/04/14/java-jiao-cheng-er/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -2221,7 +2289,7 @@ Out of the block</code></pre><h3 id="多重捕获块"><a href="#多重捕获块"
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/04/19/java-xue-xi-san/">
+                <a href="/2020/04/19/java-mian-xiang-dui-xiang/">
                     <div class="card-image">
                         
                         <img src="https://i.loli.net/2020/04/23/SVc53PDQkUeqCW9.png" class="responsive-img" alt="Java 面向对象">
@@ -2273,12 +2341,12 @@ Out of the block</code></pre><h3 id="多重捕获块"><a href="#多重捕获块"
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/04/10/java-xue-xi/">
+                <a href="/2020/04/10/java-jiao-cheng/">
                     <div class="card-image">
                         
-                        <img src="https://i.loli.net/2020/04/23/zb2REJfiVjmWPrp.png" class="responsive-img" alt="Java学习">
+                        <img src="https://i.loli.net/2020/04/23/zb2REJfiVjmWPrp.png" class="responsive-img" alt="Java教程">
                         
-                        <span class="card-title">Java学习</span>
+                        <span class="card-title">Java教程</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -2498,7 +2566,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">46.7k</span>&nbsp;字
+                class="white-color">50.4k</span>&nbsp;字
             
             
             

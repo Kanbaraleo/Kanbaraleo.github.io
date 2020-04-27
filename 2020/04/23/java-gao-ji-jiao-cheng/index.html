@@ -483,14 +483,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    6.4k
+                    8.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    26 分
+                    33 分
                 </div>
                 
 
@@ -1108,9 +1108,275 @@ data :314</code></pre><p><strong>解析：在(//1)处会出现错误，因为get
 <p><strong>本教程主要讲解以下两个主题。</strong></p>
 <ul>
 <li><strong>Socket 编程</strong>：这是使用最广泛的网络概念，它已被解释地非常详细。</li>
-<li><strong>URL 处理</strong>：这部分会在另外的篇幅里讲。</li>
+<li><strong>URL 处理</strong>：这部分会在另外的篇幅里讲。点击这里更详细地了解在<a href="https://kanbaraleo.github.io/2020/04/26/java-url-chu-li/">Java URL处理</a>。</li>
 </ul>
-<script>
+<h3 id="Socket-编程"><a href="#Socket-编程" class="headerlink" title="Socket 编程"></a>Socket 编程</h3><p><strong><code>套接字(socket)</code>使用<code>TCP</code>提供了<code>两台计算机之间</code>的<code>通信机制</code>。 <code>客户端程序</code>创建一个套接字，并尝试连接<code>服务器</code>的套接字。</strong></p>
+<p><strong>当连接建立时，<code>服务器</code>会创建一个 <code>Socket</code> 对象。<code>客户端和服务器</code>现在可以通过<code>对 Socket 对象的写入和读取</code>来<code>进行通信</code>。</strong></p>
+<p><strong><code>java.net.Socket 类</code>代表一个<code>套接字</code>，并且 <code>java.net.ServerSocket</code> 类为<code>服务器程序</code>提供了一种来<code>监听客户端</code>，并与他们<code>建立连接的机制</code>。</strong></p>
+<p>以下步骤在<strong>两台计算机之间使用套接字建立TCP连接</strong>时会出现：</p>
+<ul>
+<li><strong><code>服务器实例化一个 ServerSocket 对象</code></strong>，表示通过服务器上的端口通信。</li>
+<li><strong>服务器<code>调用 ServerSocket 类的 accept() 方法</code>，该方法将一直<code>等待</code>，直到<code>客户端连接到服务器上给定的端口</code>。</strong></li>
+<li>服务器正在等待时，<strong>一个<code>客户端实例化一个 Socket 对象</code>，指定服务器名称和端口号来请求连接。</strong></li>
+<li><strong>Socket 类的构造函数试图将客户端连接到指定的服务器和端口号。</strong>如果<strong>通信被建立，则在<code>客户端创建</code>一个 Socket 对象能够与服务器进行通信</strong>。</li>
+<li>在服务器端，<strong><code>accept()</code> 方法返回<code>服务器上一个</code>新的 <code>socket 引用</code>，该 socket <code>连接到客户端的 socket</code>。</strong></li>
+</ul>
+<p>连接建立后，通过使用 <strong>I/O 流在进行通信</strong>，每一个socket都有一个<strong>输出流和一个输入流</strong>，客户端的输出流连接到服务器端的输入流，而客户端的输入流连接到服务器端的输出流。</p>
+<p><strong>TCP 是一个<code>双向</code>的通信协议</strong>，因此<strong>数据可以通过两个数据流在<code>同一时间</code>发送</strong>.以下是一些类提供的一套完整的有用的方法来实现 socket。</p>
+<h3 id="ServerSocket-类的方法"><a href="#ServerSocket-类的方法" class="headerlink" title="ServerSocket 类的方法"></a>ServerSocket 类的方法</h3><p><strong><code>服务器应用程序</code>通过使用 <code>java.net.ServerSocket</code> 类以<code>获取一个端口</code>,并且<code>侦听客户端请求</code>。</strong></p>
+<p>ServerSocket 类有四个构造方法：</p>
+<table>
+<thead>
+<tr>
+<th align="left">序号</th>
+<th align="left">方法描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">1</td>
+<td align="left"><strong>public ServerSocket(int port) throws IOException</strong><br>创建绑定到特定端口的服务器套接字。</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left"><strong>public ServerSocket(int port, int backlog) throws IOException</strong><br>利用指定的 backlog 创建服务器套接字并将其绑定到指定的本地端口号。</td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left"><strong>public ServerSocket(int port, int backlog, InetAddress address) throws IOException</strong><br>使用指定的端口、侦听 backlog 和要绑定到的本地 IP 地址创建服务器。</td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left"><strong>public ServerSocket() throws IOException</strong><br>创建非绑定服务器套接字。</td>
+</tr>
+</tbody></table>
+<p>如果 ServerSocket 构造方法没有抛出异常，就意味着你的应用程序已经成功绑定到指定的端口，并且侦听客户端请求。</p>
+<p>这里有一些 ServerSocket 类的常用方法：</p>
+<table>
+<thead>
+<tr>
+<th align="left">序号</th>
+<th align="left">方法描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">1</td>
+<td align="left"><strong>public int getLocalPort()</strong><br>返回此套接字在其上侦听的端口。</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left"><strong>public Socket accept() throws IOException</strong><br>侦听并接受到此套接字的连接。</td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left"><strong>public void setSoTimeout(int timeout)</strong><br>通过<strong>指定超时值</strong>启用/禁用 SO_TIMEOUT，以毫秒为单位。</td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left"><strong>public void bind(SocketAddress host, int backlog)</strong><br>将 ServerSocket 绑定到特定地址（IP 地址和端口号）。</td>
+</tr>
+</tbody></table>
+<h3 id="Socket-类的方法"><a href="#Socket-类的方法" class="headerlink" title="Socket 类的方法"></a>Socket 类的方法</h3><p><strong>j<code>ava.net.Socket</code> 类代表<code>客户端和服务器</code>都用来<code>互相沟通的套接字</code>。<code>客户端</code>要获取一个 Socket 对象通过<code>实例化</code> ，而 <code>服务器</code>获得一个 Socket 对象则通过 <code>accept() 方法的返回值</code>。</strong></p>
+<p>Socket 类有五个构造方法.</p>
+<table>
+<thead>
+<tr>
+<th align="left">序号</th>
+<th align="left">方法描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">1</td>
+<td align="left"><strong>public Socket(String host, int port) throws UnknownHostException, IOException.</strong><br>创建一个流套接字并将其连接到<strong>指定主机上的指定端口号</strong>。</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left"><strong>public Socket(InetAddress host, int port) throws IOException</strong><br>创建一个流套接字并将其连接到<strong>指定 IP 地址的指定端口号</strong>。</td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left"><strong>public Socket(String host, int port, InetAddress localAddress, int localPort) throws IOException.</strong><br>创建一个套接字并将其连接到<strong>指定远程主机上的指定远程端口</strong>。</td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left"><strong>public Socket(InetAddress host, int port, InetAddress localAddress, int localPort) throws IOException.</strong><br>创建一个套接字并将其连接到<strong>指定远程地址上的指定远程端口</strong>。</td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="left"><strong>public Socket()</strong><br>通过<strong>系统默认类型</strong>的 SocketImpl 创建未连接套接字</td>
+</tr>
+</tbody></table>
+<p><strong>当 Socket 构造方法返回，并<code>没有简单的实例化</code>了一个 Socket 对象，它实际上<code>会尝试连接到指定的服务器和端口</code>。</strong></p>
+<p>下面列出了一些感兴趣的方法，<strong>注意<code>客户端和服务器端都有一个 Socket 对象</code>，所以无论客户端还是服务端<code>都能够调用这些方法</code>。</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">序号</th>
+<th align="left">方法描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">1</td>
+<td align="left"><strong>public void connect(SocketAddress host, int timeout) throws IOException</strong><br>将此套接字<strong>连接到服务器</strong>，并指定一个超时值。</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left"><strong>public InetAddress getInetAddress()</strong><br>返回套接字连接的<strong>地址</strong>。</td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left"><strong>public int getPort()</strong><br>返回此套接字连接到的<strong>远程端口</strong>。</td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left"><strong>public int getLocalPort()</strong><br>返回此套接字绑定到的<strong>本地端口</strong>。</td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="left"><strong>public SocketAddress getRemoteSocketAddress()</strong><br>返回此套接字连接的<strong>端点的地址</strong>，如果未连接则返回 null。</td>
+</tr>
+<tr>
+<td align="left">6</td>
+<td align="left"><strong>public InputStream getInputStream() throws IOException</strong><br>返回此套接字的<strong>输入流</strong>。</td>
+</tr>
+<tr>
+<td align="left">7</td>
+<td align="left"><strong>public OutputStream getOutputStream() throws IOException</strong><br>返回此套接字的<strong>输出流</strong>。</td>
+</tr>
+<tr>
+<td align="left">8</td>
+<td align="left"><strong>public void close() throws IOException</strong><br><strong>关闭</strong>此套接字。</td>
+</tr>
+</tbody></table>
+<h3 id="InetAddress-类的方法"><a href="#InetAddress-类的方法" class="headerlink" title="InetAddress 类的方法"></a>InetAddress 类的方法</h3><p><strong>这个类表示互联网协议(IP)地址</strong>。下面列出了 Socket 编程时比较有用的方法：</p>
+<table>
+<thead>
+<tr>
+<th align="left">序号</th>
+<th align="left">方法描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">1</td>
+<td align="left"><strong>static InetAddress getByAddress(byte[] addr)</strong><br>在给定<strong>原始 IP 地址的情况下，返回 InetAddress 对象</strong>。</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left"><strong>static InetAddress getByAddress(String host, byte[] addr)</strong><br>根据提供的<strong>主机名和 IP 地址创建 InetAddress</strong>。</td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left"><strong>static InetAddress getByName(String host)</strong><br>在给定主机名的情况下<strong>确定主机的 IP 地址</strong>。</td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left"><strong>String getHostAddress()</strong><br> 返回 <strong>IP 地址字符串</strong>（以文本表现形式）。</td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="left"><strong>String getHostName()</strong> <br> 获取此 <strong>IP 地址的主机名</strong>。</td>
+</tr>
+<tr>
+<td align="left">6</td>
+<td align="left"><strong>static InetAddress getLocalHost()</strong><br>返回<strong>本地主机</strong>。</td>
+</tr>
+<tr>
+<td align="left">7</td>
+<td align="left"><strong>String toString()</strong><br>将此 IP 地址转换为 String。</td>
+</tr>
+</tbody></table>
+<h3 id="Socket-客户端实例"><a href="#Socket-客户端实例" class="headerlink" title="Socket 客户端实例"></a>Socket 客户端实例</h3><p>如下的 GreetingClient 是一个<strong>客户端程序</strong>，该程序<strong>通过 socket 连接到服务器并发送一个请求，然后等待一个响应。</strong></p>
+<pre><code>// 文件名 GreetingClient.java
+
+import java.net.*;
+import java.io.*;
+
+public class GreetingClient
+{
+   public static void main(String [] args)
+   {
+      String serverName = args[0];
+      int port = Integer.parseInt(args[1]);
+      try
+      {
+         System.out.println("连接到主机：" + serverName + " ，端口号：" + port);
+         Socket client = new Socket(serverName, port);
+         System.out.println("远程主机地址：" + client.getRemoteSocketAddress());
+         OutputStream outToServer = client.getOutputStream();
+         DataOutputStream out = new DataOutputStream(outToServer);
+
+         out.writeUTF("Hello from " + client.getLocalSocketAddress());
+         InputStream inFromServer = client.getInputStream();
+         DataInputStream in = new DataInputStream(inFromServer);
+         System.out.println("服务器响应： " + in.readUTF());
+         client.close();
+      }catch(IOException e)
+      {
+         e.printStackTrace();
+      }
+   }
+}</code></pre><h3 id="Socket-服务端实例"><a href="#Socket-服务端实例" class="headerlink" title="Socket 服务端实例"></a>Socket 服务端实例</h3><p>如下的GreetingServer 程序是一个<strong>服务器端应用程序</strong>，<strong>使用 Socket 来监听一个指定的端口</strong>。</p>
+<pre><code>// 文件名 GreetingServer.java
+
+import java.net.*;
+import java.io.*;
+
+public class GreetingServer extends Thread
+{
+   private ServerSocket serverSocket;
+
+   public GreetingServer(int port) throws IOException
+   {
+      serverSocket = new ServerSocket(port);
+      serverSocket.setSoTimeout(10000);
+   }
+
+   public void run()
+   {
+      while(true)
+      {
+         try
+         {
+            System.out.println("等待远程连接，端口号为：" + serverSocket.getLocalPort() + "...");
+            Socket server = serverSocket.accept();
+            System.out.println("远程主机地址：" + server.getRemoteSocketAddress());
+            DataInputStream in = new DataInputStream(server.getInputStream());
+            System.out.println(in.readUTF());
+            DataOutputStream out = new DataOutputStream(server.getOutputStream());
+            out.writeUTF("谢谢连接我：" + server.getLocalSocketAddress() + "\nGoodbye!");
+            server.close();
+         }catch(SocketTimeoutException s)
+         {
+            System.out.println("Socket timed out!");
+            break;
+         }catch(IOException e)
+         {
+            e.printStackTrace();
+            break;
+         }
+      }
+   }
+   public static void main(String [] args)
+   {
+      int port = Integer.parseInt(args[0]);
+      try
+      {
+         Thread t = new GreetingServer(port);
+         t.run();
+      }catch(IOException e)
+      {
+         e.printStackTrace();
+      }
+   }
+}</code></pre><p>编译以上两个 java 文件代码，并执行以下命令来启动服务，使用端口号为 6066：</p>
+<pre><code>$ javac GreetingServer.java 
+$ java GreetingServer 6066
+等待远程连接，端口号为：6066...</code></pre><p>新开一个命令窗口，执行以上命令来开启客户端：</p>
+<pre><code>$ javac GreetingClient.java 
+$ java GreetingClient localhost 6066
+连接到主机：localhost ，端口号：6066
+远程主机地址：localhost/127.0.0.1:6066
+服务器响应： 谢谢连接我：/127.0.0.1:6066
+Goodbye!</code></pre><h2 id="Java-多线程编程"><a href="#Java-多线程编程" class="headerlink" title="Java 多线程编程"></a>Java 多线程编程</h2><h2 id="Java-Applet-基础"><a href="#Java-Applet-基础" class="headerlink" title="Java Applet 基础"></a>Java Applet 基础</h2><h2 id="Java-MySQL-连接"><a href="#Java-MySQL-连接" class="headerlink" title="Java MySQL 连接"></a>Java MySQL 连接</h2><script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -1636,10 +1902,8 @@ data :314</code></pre><p><strong>解析：在(//1)处会出现错误，因为get
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return
+                            Java URL处理URL（Uniform Resource Locator）中文名为统一资源定位符，有时也被俗称为网页地址。表示为互联网上的资源，如网页或者FTP地址。
+本章节我们将介绍Java是如处理URL的。URL可以分为如下几个部分
                         
                     </div>
                     <div class="publish-info">
@@ -1661,12 +1925,12 @@ data :314</code></pre><p><strong>解析：在(//1)处会出现错误，因为get
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/URL/">
-                        <span class="chip bg-color">URL</span>
-                    </a>
-                    
                     <a href="/tags/Markdown/">
                         <span class="chip bg-color">Markdown</span>
+                    </a>
+                    
+                    <a href="/tags/URL/">
+                        <span class="chip bg-color">URL</span>
                     </a>
                     
                 </div>
@@ -1680,7 +1944,7 @@ data :314</code></pre><p><strong>解析：在(//1)处会出现错误，因为get
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/04/19/java-xue-xi-san/">
+                <a href="/2020/04/19/java-mian-xiang-dui-xiang/">
                     <div class="card-image">
                         
                         <img src="https://i.loli.net/2020/04/23/SVc53PDQkUeqCW9.png" class="responsive-img" alt="Java 面向对象">
@@ -1907,7 +2171,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">46.7k</span>&nbsp;字
+                class="white-color">50.4k</span>&nbsp;字
             
             
             

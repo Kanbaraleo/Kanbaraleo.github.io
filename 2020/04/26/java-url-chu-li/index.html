@@ -449,12 +449,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/URL/">
-                                <span class="chip bg-color">URL</span>
-                            </a>
-                        
                             <a href="/tags/Markdown/">
                                 <span class="chip bg-color">Markdown</span>
+                            </a>
+                        
+                            <a href="/tags/URL/">
+                                <span class="chip bg-color">URL</span>
                             </a>
                         
                     </div>
@@ -487,14 +487,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    52
+                    1.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    5 分
                 </div>
                 
 
@@ -510,7 +510,238 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <script>
+                <h2 id="Java-URL处理"><a href="#Java-URL处理" class="headerlink" title="Java URL处理"></a>Java URL处理</h2><p><strong><code>URL（Uniform Resource Locator）</code>中文名为<code>统一资源定位符</code>，有时也被俗称为<code>网页地址</code>。表示为<code>互联网上的资源</code>，如<code>网页或者FTP地址</code>。</strong></p>
+<p>本章节我们将介绍Java是如处理URL的。URL可以分为如下几个部分。</p>
+<pre><code>protocol://host:port/path?query#fragment</code></pre><p><strong>protocol(协议) 可以是 HTTP、HTTPS、FTP 和 File</strong></p>
+<p><strong>port 为端口号</strong></p>
+<p><strong>path 为文件路径及文件名</strong></p>
+<h3 id="HTTP-协议的-URL-实例如下"><a href="#HTTP-协议的-URL-实例如下" class="headerlink" title="HTTP 协议的 URL 实例如下:"></a>HTTP 协议的 URL 实例如下:</h3><pre><code>http://www.runoob.com/index.html?language=cn#j2se</code></pre><p>URL 解析：</p>
+<ul>
+<li><strong>协议为(protocol)</strong>：http</li>
+<li><strong>主机为(host:port)</strong>：<a href="http://www.runoob.com" target="_blank" rel="noopener">www.runoob.com</a></li>
+<li><strong>端口号为(port)</strong>: 80 ，以上URL实例并未指定端口，因为 HTTP 协议默认的端口号为 80。</li>
+<li><strong>文件路径为(path)</strong>：/index.html</li>
+<li><strong>请求参数(query)</strong>：language=cn</li>
+<li><strong>定位位置(fragment)</strong>：j2se，定位到网页中 id 属性为 j2se 的 HTML 元素位置 。</li>
+</ul>
+<h3 id="URL-类方法"><a href="#URL-类方法" class="headerlink" title="URL 类方法"></a>URL 类方法</h3><p>在<strong><code>java.net</code>包中定义了<code>URL类</code>，该类用来<code>处理有关URL的内容</code></strong>。对于URL类的创建和使用，下面分别进行介绍。</p>
+<p><strong><code>java.net.URL</code>提供了<code>丰富的URL构建方式</code>，并可以通过java.net.URL来<code>获取资源</code>。</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">序号</th>
+<th align="left">方法描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">1</td>
+<td align="left"><strong>public URL(String protocol, String host, int port, String file) throws MalformedURLException</strong>.<br>通过给定的参数(协议、主机名、端口号、文件名)创建URL。</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left"><strong>public URL(String protocol, String host, String file) throws MalformedURLException</strong><br>使用指定的协议、主机名、文件名创建URL，端口使用协议的默认端口。</td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left"><strong>public URL(String url) throws MalformedURLException</strong><br>通过给定的URL字符串创建URL</td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left"><strong>public URL(URL context, String url) throws MalformedURLException</strong><br>使用基地址和相对URL创建</td>
+</tr>
+</tbody></table>
+<p>URL类中<strong>用于访问URL的各个部分的方法</strong>，具体方法及描述如下：</p>
+<table>
+<thead>
+<tr>
+<th align="left">序号</th>
+<th align="left">方法描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">1</td>
+<td align="left"><strong>public String getPath()</strong><br>返回URL路径部分。</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left"><strong>public String getQuery()</strong><br>返回URL查询部分。</td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left"><strong>public String getAuthority()</strong><br>获取此 URL 的授权部分。</td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left"><strong>public int getPort()</strong><br>返回URL端口部分</td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="left"><strong>public int getDefaultPort()</strong><br>返回协议的默认端口号。</td>
+</tr>
+<tr>
+<td align="left">6</td>
+<td align="left"><strong>public String getProtocol()</strong><br>返回URL的协议</td>
+</tr>
+<tr>
+<td align="left">7</td>
+<td align="left"><strong>public String getHost()</strong><br>返回URL的主机</td>
+</tr>
+<tr>
+<td align="left">8</td>
+<td align="left"><strong>public String getFile()</strong><br>返回URL文件名部分</td>
+</tr>
+<tr>
+<td align="left">9</td>
+<td align="left"><strong>public String getRef()</strong><br>获取此 URL 的锚点（也称为”引用”）。</td>
+</tr>
+<tr>
+<td align="left">10</td>
+<td align="left"><strong>public URLConnection openConnection() throws IOException</strong><br>打开一个URL连接，并运行客户端访问资源。</td>
+</tr>
+</tbody></table>
+<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><pre><code>import java.net.*;
+import java.io.*;
+
+public class URLDemo
+{
+   public static void main(String [] args)
+   {
+      try
+      {
+         URL url = new URL("https://www.runoob.com/index.html?language=cn#j2se");
+         System.out.println("URL 为：" + url.toString());
+         System.out.println("协议为：" + url.getProtocol());
+         System.out.println("验证信息：" + url.getAuthority());
+         System.out.println("文件名及请求参数：" + url.getFile());
+         System.out.println("主机名：" + url.getHost());
+         System.out.println("路径：" + url.getPath());
+         System.out.println("端口：" + url.getPort());
+         System.out.println("默认端口：" + url.getDefaultPort());
+         System.out.println("请求参数：" + url.getQuery());
+         System.out.println("定位位置：" + url.getRef());
+      }catch(IOException e)
+      {
+         e.printStackTrace();
+      }
+   }
+}</code></pre><p>以上实例编译运行结果如下:</p>
+<pre><code>URL 为：https://www.runoob.com/index.html?language=cn#j2se
+协议为：https
+验证信息：www.runoob.com
+文件名及请求参数：/index.html?language=cn
+主机名：www.runoob.com
+路径：/index.html
+端口：-1
+默认端口：443
+请求参数：language=cn
+定位位置：j2se</code></pre><h3 id="URLConnections-类方法"><a href="#URLConnections-类方法" class="headerlink" title="URLConnections 类方法"></a>URLConnections 类方法</h3><p><strong><code>openConnection()</code>返回一个 <code>java.net.URLConnection</code>。</strong></p>
+<p>例如：</p>
+<ul>
+<li><p>如果你连接<strong>HTTP协议的URL, openConnection() 方法返回 HttpURLConnection 对象。</strong></p>
+</li>
+<li><p>如果你连接的<strong>URL为一个 JAR 文件, openConnection() 方法将返回 JarURLConnection 对象。</strong></p>
+</li>
+<li><p>等等…</p>
+</li>
+</ul>
+<p>URLConnection 方法列表如下：</p>
+<table>
+<thead>
+<tr>
+<th align="left">序号</th>
+<th align="left">方法描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">1</td>
+<td align="left">Object getContent()<br>检索URL链接内容</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">Object getContent(Class[] classes)<br>检索URL链接内容</td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left">String getContentEncoding()<br>返回头部 content-encoding 字段值。</td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left">int getContentLength()<br>返回头部 content-length字段值</td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="left">String getContentType()<br>返回头部 content-type 字段值</td>
+</tr>
+<tr>
+<td align="left">6</td>
+<td align="left">int getLastModified()<br>返回头部 last-modified 字段值。</td>
+</tr>
+<tr>
+<td align="left">7</td>
+<td align="left">long getExpiration()<br>返回头部 expires 字段值。</td>
+</tr>
+<tr>
+<td align="left">8</td>
+<td align="left">long getIfModifiedSince()<br>返回对象的 ifModifiedSince 字段值。</td>
+</tr>
+<tr>
+<td align="left">9</td>
+<td align="left">public void setDoInput(boolean input)<br>URL 连接可用于输入和/或输出。如果打算使用 URL 连接进行输入，则将 DoInput 标志设置为 true；如果不打算使用，则设置为 false。默认值为 true。</td>
+</tr>
+<tr>
+<td align="left">10</td>
+<td align="left">public void setDoOutput(boolean output)<br>URL 连接可用于输入和/或输出。如果打算使用 URL 连接进行输出，则将 DoOutput 标志设置为 true；如果不打算使用，则设置为 false。默认值为 false。</td>
+</tr>
+<tr>
+<td align="left">11</td>
+<td align="left">public InputStream getInputStream() throws IOException<br>返回URL的输入流，用于读取资源</td>
+</tr>
+<tr>
+<td align="left">12</td>
+<td align="left">public OutputStream getOutputStream() throws IOException<br>返回URL的输出流, 用于写入资源。</td>
+</tr>
+<tr>
+<td align="left">13</td>
+<td align="left">public URL getURL()<br>返回 URLConnection 对象连接的URL</td>
+</tr>
+</tbody></table>
+<h3 id="实例-1"><a href="#实例-1" class="headerlink" title="实例"></a>实例</h3><p>以下<strong>实例中URL采用了HTTP 协议。 <code>openConnection</code> 返回<code>HttpURLConnection</code>对象</strong>。</p>
+<pre><code>import java.net.*;
+import java.io.*;
+public class URLConnDemo
+{
+   public static void main(String [] args)
+   {
+      try
+      {
+         URL url = new URL("https://www.runoob.com");
+         URLConnection urlConnection = url.openConnection();
+         HttpURLConnection connection = null;
+         if(urlConnection instanceof HttpURLConnection)
+         {
+            connection = (HttpURLConnection) urlConnection;
+         }
+         else
+         {
+            System.out.println("请输入 URL 地址");
+            return;
+         }
+         BufferedReader in = new BufferedReader(
+         new InputStreamReader(connection.getInputStream()));
+         String urlString = "";
+         String current;
+         while((current = in.readLine()) != null)
+         {
+            urlString += current;
+         }
+         System.out.println(urlString);
+      }catch(IOException e)
+      {
+         e.printStackTrace();
+      }
+   }
+}</code></pre><p>以上实例编译运行结果如下：</p>
+<pre><code>.....这里会输出菜鸟教程首页(http://www.runoob.com)的 HTML 内容.....</code></pre><script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -591,12 +822,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/URL/">
-                                    <span class="chip bg-color">URL</span>
-                                </a>
-                            
                                 <a href="/tags/Markdown/">
                                     <span class="chip bg-color">Markdown</span>
+                                </a>
+                            
+                                <a href="/tags/URL/">
+                                    <span class="chip bg-color">URL</span>
                                 </a>
                             
                         </div>
@@ -1025,17 +1256,16 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/04/26/java-url-chu-li/">
+                <a href="/2020/04/27/java-shi-li/">
                     <div class="card-image">
                         
-                        <img src="https://i.loli.net/2020/04/26/mGt2859PoIchXuQ.png" class="responsive-img" alt="Java URL处理">
+                        <img src="https://i.loli.net/2020/04/27/Qw1Yt8bNceSn79i.png" class="responsive-img" alt="Java实例">
                         
-                        <span class="card-title">Java URL处理</span>
+                        <span class="card-title">Java实例</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1048,9 +1278,9 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-26
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-27
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1063,12 +1293,11 @@
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/URL/">
-                        <span class="chip bg-color">URL</span>
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">Java</span>
                     </a>
                     
                     <a href="/tags/Markdown/">
@@ -1316,7 +1545,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">46.7k</span>&nbsp;字
+                class="white-color">50.4k</span>&nbsp;字
             
             
             
