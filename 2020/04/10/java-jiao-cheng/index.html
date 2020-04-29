@@ -483,14 +483,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    12k
+                    12.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    45 分
+                    46 分
                 </div>
                 
 
@@ -522,7 +522,7 @@
 <h3 id="Java主要特性"><a href="#Java主要特性" class="headerlink" title="Java主要特性"></a>Java主要特性</h3><ul>
 <li><p><strong>Java语言是简单的</strong>：<br>Java语言的语法与C语言和C++语言很接近，使得大多数程序员很容易学习和使用。另一方面，Java丢弃了C++中很少使用的、很难理解的、令人迷惑的那些特性，如<strong>操作符重载、多继承、自动的强制类型转换</strong>。特别地，Java语言<strong>不使用指针，而是引用</strong>。并提供了自动的废料收集，使得程序员不必为内存管理而担忧。</p>
 </li>
-<li><p><strong>Java语言是面向对象的</strong>：<br>Java语言提供类、接口和继承等面向对象的特性，为了简单起见，只支持<strong>类之间的单继承</strong>，但支持<strong>接口之间的多继承</strong>，并支持类与接口之间的实现机制（关键字为implements）。Java语言全面支持动态绑定，而C++语言只对虚函数使用动态绑定。总之，Java语言是一个纯的面向对象程序设计语言。</p>
+<li><p><strong>Java语言是面向对象的</strong>：<br>Java语言提供类、接口和继承等面向对象的特性，为了简单起见，只支持<strong>类之间的单继承</strong>，但支持<strong>接口之间的多继承</strong>，并支持类与接口之间的实现机制（关键字为implements）。Java语言全面支持动态绑定，而C++语言只对虚函数使用动态绑定。总之，Java语言是一个纯的面向对象程序设计语言。<strong>面向对象的思想是万物皆为对象 ，既任何事物都能封装成对象</strong>。</p>
 </li>
 <li><p><strong>Java语言是分布式的</strong>：<br>Java语言支持Internet应用的开发，在基本的Java应用编程接口中有一个网络应用编程接口（java net），它提供了用于网络应用编程的类库，包括URL、URLConnection、Socket、ServerSocket等。Java的RMI（远程方法激活）机制也是开发分布式应用的重要手段。</p>
 </li>
@@ -807,7 +807,8 @@ public class EmployeeTest{
 名字:RUNOOB2
 年龄:21
 职位:菜鸟程序员
-薪水:500.0</code></pre><h2 id="Java-基本数据类型"><a href="#Java-基本数据类型" class="headerlink" title="Java 基本数据类型"></a>Java 基本数据类型</h2><p>变量就是申请内存来存储值。也就是说，当创建变量的时候，需要在内存中申请空间。</p>
+薪水:500.0</code></pre><h2 id="Java-基本数据类型"><a href="#Java-基本数据类型" class="headerlink" title="Java 基本数据类型"></a>Java 基本数据类型</h2><p><strong><code>基本类型类型以及对象的引用变量</code>是存储在<code>栈内存</code>中 ；而对象本身的值或者说 new 创建的<code>对象和数组</code>是存储在<code>堆内存</code>中。</strong></p>
+<p>变量就是申请内存来存储值。也就是说，当创建变量的时候，需要在内存中申请空间。</p>
 <p>内存管理系统<strong>根据变量的类型</strong>为变量分配存储空间，分配的空间<strong>只能用来储存该类型数据</strong>。</p>
 <p><img src="https://www.runoob.com/wp-content/uploads/2013/12/memorypic1.jpg" alt=""></p>
 <p>因此，通过定义不同类型的变量，可以在内存中储存整数、小数或者字符。</p>
@@ -1063,6 +1064,7 @@ String   :null</code></pre><h3 id="引用类型"><a href="#引用类型" class="
 <li><strong>对象、数组都是引用数据类型。</strong></li>
 <li>所有引用类型的<strong>默认值都是null</strong>。</li>
 <li>一个引用变量可以用来引用任何与之兼容的类型。</li>
+<li><strong>空引用可用于访问静态变量或方法。</strong>当我们<strong>通过一个对象的引用访问静态成员属性或者方法时 ，访问操作只与所声明的引用类型相关 ；与引用对象是否为 null 无关</strong>，因为访问静态成员不需要实例化对象 </li>
 <li>例子：Site site = new Site(“Runoob”)。</li>
 </ul>
 <h3 id="Java-常量"><a href="#Java-常量" class="headerlink" title="Java 常量"></a>Java 常量</h3><p>常量在<strong>程序运行时是不能被修改</strong>的。</p>
@@ -1124,7 +1126,7 @@ char类型和int计算后的值等于66</code></pre><p><strong>解析：c1 的�
 </ol>
 <h3 id="隐含强制类型转换"><a href="#隐含强制类型转换" class="headerlink" title="隐含强制类型转换"></a>隐含强制类型转换</h3><ol>
 <li><strong>整数的默认类型是 int</strong>。</li>
-<li><strong>浮点型不存在这种情况</strong>，因为在<strong>定义 float 类型时必须在数字后面跟上 F 或者 f</strong>。 </li>
+<li><strong>浮点型默认为 double</strong>，因为在<strong>定义 float 类型时必须在数字后面跟上 F 或者 f</strong>。 </li>
 </ol>
 <h1 id="Java-变量类型"><a href="#Java-变量类型" class="headerlink" title="Java 变量类型"></a>Java 变量类型</h1><p>在Java语言中，所有的<strong>变量在使用前必须声明</strong>。声明变量的基本格式如下：</p>
 <pre><code>type identifier [ = value][, identifier [= value] ...] ;  //[]表示可选</code></pre><p><strong>格式说明：type为Java数据类型。identifier是变量名。可以使用逗号隔开来声明多个同类型变量。</strong></p>
@@ -2265,7 +2267,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">50.4k</span>&nbsp;字
+                class="white-color">55.9k</span>&nbsp;字
             
             
             

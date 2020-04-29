@@ -487,14 +487,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    52
+                    664
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -510,7 +510,60 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <script>
+                <h2 id="Java-字符串"><a href="#Java-字符串" class="headerlink" title="Java 字符串"></a>Java 字符串</h2><h3 id="字符串比较"><a href="#字符串比较" class="headerlink" title="字符串比较"></a>字符串比较</h3><p><strong>通过字符串函数 compareTo (string) ，compareToIgnoreCase(String) 及 compareTo(object string) 来比较两个字符串，并返回字符串中第一个字母ASCII的差值。</strong></p>
+<p>compareTo() 方法用于两种方式的比较：</p>
+<ul>
+<li>字符串与对象进行比较。</li>
+<li>按字典顺序比较两个字符串。</li>
+</ul>
+<p>语法：</p>
+<pre><code>int compareTo(Object o)
+
+或
+
+int compareTo(String anotherString)</code></pre><p>返回值是整型，它是先比较对应字符的大小(ASCII码顺序)，如果第一个字符和参数的第一个字符不等，结束比较，返回他们之间的差值，如果第一个字符和参数的第一个字符相等，则以第二个字符和参数的第二个字符做比较，以此类推,直至比较的字符或被比较的字符有一方结束。</p>
+<ul>
+<li>如果参数字符串等于此字符串，则返回值 0；</li>
+<li>如果此字符串小于字符串参数，则返回一个小于 0 的值；</li>
+<li>如果此字符串大于字符串参数，则返回一个大于 0 的值。</li>
+</ul>
+<p><strong>StringCompareEmp.java 文件</strong></p>
+<pre><code>public class StringCompareEmp{
+   public static void main(String args[]){
+      String str = "Hello World";
+      String anotherString = "hello world";
+      Object objStr = str;
+
+      System.out.println( str.compareTo(anotherString) );
+      System.out.println( str.compareToIgnoreCase(anotherString) );  //忽略大小写
+      System.out.println( str.compareTo(objStr.toString()));
+   }
+}</code></pre><p><strong>以上代码实例输出结果为：</strong></p>
+<pre><code>-32
+0
+0</code></pre><h3 id="查找字符串最后一次出现的位置"><a href="#查找字符串最后一次出现的位置" class="headerlink" title="查找字符串最后一次出现的位置"></a>查找字符串最后一次出现的位置</h3><p><strong>通过字符串函数 strOrig.lastIndexOf(Stringname) 来查找子字符串 Stringname 在 strOrig 出现的位置</strong></p>
+<pre><code>public class SearchString {
+    public static void main(String args[]) {
+        String Str1 = "https://www.csdn.net.csdn.net/" ;
+        String Str2 = "csdn",Str3 = "net" ;
+        System.out.println("n第一次的位置："+ Str1.indexOf( "n" ) ) ;
+//第一位以0开始计算，比如abcd的顺序是0123
+        System.out.println("n最后的位置：" + Str1.lastIndexOf( "n" ) ) ;
+        System.out.println("字符串Str2【"+ Str2 +"】最后的位置：" + Str1.lastIndexOf( Str2 ) ) ;
+
+        System.out.println("从第16个位置开始，n第一次的位置：" + Str1.indexOf( "n", 16 ) ) ; 
+//虽然从10开始，但是返回值依然是从开始计算
+        System.out.println("从第15个位置开始，字符串Str2【" + Str2 +"】第一次的位置：" + Str1.indexOf( Str2, 15 )) ;
+        System.out.println("字符串Str3【"+ Str3 +"】最后的位置：" + Str1.lastIndexOf( Str3 )) ;
+    }
+}</code></pre><p><strong>运行结果如下：</strong></p>
+<pre><code>n第一次的位置：15
+n最后的位置：26
+字符串Str2【csdn】最后的位置：21
+从第16个位置开始，n第一次的位置：17
+从第15个位置开始，字符串Str2【csdn】第一次的位置：21
+字符串Str3【net】最后的位置：26
+</code></pre><script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -1041,10 +1094,7 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return
+                            Java 字符串字符串比较通过字符串函数 compareTo (string) ，compareToIgnoreCase(String) 及 compareTo(object string) 来比较两个字符串，并返回字符串中第一个字母ASC
                         
                     </div>
                     <div class="publish-info">
@@ -1314,7 +1364,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">50.4k</span>&nbsp;字
+                class="white-color">55.9k</span>&nbsp;字
             
             
             

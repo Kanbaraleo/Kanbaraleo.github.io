@@ -483,7 +483,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    7.6k
+                    7.7k
                 </div>
                 
 
@@ -1011,10 +1011,32 @@ Salary 类的 mailCheck 方法
 </ul>
 <p><strong>以上<code>整个过程</code>被称为<code>虚拟方法调用</code>，该<code>方法被称为虚拟方法</code>。</strong></p>
 <p>Java中所有的方法都能以这种方式表现，因此，<strong>重写的方法能在运行时调用，不管编译的时候源代码中引用变量是什么数据类型。</strong></p>
-<h3 id="多态的实现方式"><a href="#多态的实现方式" class="headerlink" title="多态的实现方式"></a>多态的实现方式</h3><h4 id="方式一：重写："><a href="#方式一：重写：" class="headerlink" title="方式一：重写："></a>方式一：重写：</h4><p>这个内容已经在上一章节详细讲过，就不再阐述，详细可访问：<a href="https://www.runoob.com/java/java-override-overload.html" target="_blank" rel="noopener">上一章节</a></p>
-<h4 id="方式二：接口"><a href="#方式二：接口" class="headerlink" title="方式二：接口"></a>方式二：接口</h4><p> java中的接口类似于生活中的接口，就是一些方法特征的集合，但没有方法的实现。具体可以看 <a href="https://www.runoob.com/java/java-interfaces.html" target="_blank" rel="noopener">Java接口</a> 这一章节的内容。</p>
-<h4 id="方式三：抽象类和抽象方法"><a href="#方式三：抽象类和抽象方法" class="headerlink" title="方式三：抽象类和抽象方法"></a>方式三：抽象类和抽象方法</h4><p>详情请看 <a href="https://www.runoob.com/java/java-abstraction.html" target="_blank" rel="noopener">Java抽象类</a> 章节。</p>
-<h2 id="Java-抽象类"><a href="#Java-抽象类" class="headerlink" title="Java 抽象类"></a>Java 抽象类</h2><p><strong>在<code>面向对象</code>的概念中，所有的<code>对象都是通过类来描绘</code>的，但是反过来，并<code>不是所有的类都是用来描绘对象</code>的，如果<code>一个类中没有包含足够的信息来描绘一个具体的对象</code>，这样的类就是<code>抽象类</code>。</strong></p>
+<h3 id="多态的实现方式"><a href="#多态的实现方式" class="headerlink" title="多态的实现方式"></a>多态的实现方式</h3><h4 id="方式一：重写："><a href="#方式一：重写：" class="headerlink" title="方式一：重写："></a>方式一：重写：</h4><p>多态的定义格式：及时就是父类的引用变量指向子类对象</p>
+<p><strong>普通类多态定义的格式</strong></p>
+<pre><code>父类类型  变量名 = new 子类类型();
+变量名.方法名();</code></pre><h4 id="方式二：接口"><a href="#方式二：接口" class="headerlink" title="方式二：接口"></a>方式二：接口</h4><p><strong>接口多态定义的格式</strong></p>
+<pre><code>接口 变量名 = new 接口实现类();</code></pre><p>如：</p>
+<pre><code>interface Fu {
+    public abstract void method();
+}
+class Zi implements Fu {
+    public void method(){
+        System.out.println(“重写接口抽象方法”);
+    }
+}
+//接口的多态使用
+Fu fu = new Zi();</code></pre><h4 id="方式三：抽象类和抽象方法"><a href="#方式三：抽象类和抽象方法" class="headerlink" title="方式三：抽象类和抽象方法"></a>方式三：抽象类和抽象方法</h4><p><strong>抽象类多态定义的格式</strong></p>
+<pre><code>抽象类 变量名 = new 抽象类子类();</code></pre><p>如：</p>
+<pre><code>abstract class Fu {
+    public abstract void method();
+}
+class Zi extends Fu {
+    public void method(){
+        System.out.println(“重写父类抽象方法”);
+    }
+}
+//类的多态使用
+Fu fu= new Zi();</code></pre><h2 id="Java-抽象类"><a href="#Java-抽象类" class="headerlink" title="Java 抽象类"></a>Java 抽象类</h2><p><strong>在<code>面向对象</code>的概念中，所有的<code>对象都是通过类来描绘</code>的，但是反过来，并<code>不是所有的类都是用来描绘对象</code>的，如果<code>一个类中没有包含足够的信息来描绘一个具体的对象</code>，这样的类就是<code>抽象类</code>。</strong></p>
 <p><strong>抽象类除了<code>不能实例化对象</code>之外，类的<code>其它功能依然存在</code>，成员变量、成员方法和构造方法的访问方式和普通类一样。</strong></p>
 <p><strong>由于<code>抽象类不能实例化对象</code>，所以抽象类<code>必须被继承</code>，才能被使用。</strong>也是因为这个原因，通常在设计阶段决定要不要设计抽象类。</p>
 <p><strong><code>父类包含了子类集合的常见的方法</code>，但是由于<code>父类本身是抽象</code>的，所以<code>不能使用这些方法</code>。</strong></p>
@@ -2037,7 +2059,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">50.4k</span>&nbsp;字
+                class="white-color">55.9k</span>&nbsp;字
             
             
             
