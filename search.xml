@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Java8-新特性</title>
+      <link href="/2020/04/29/java8-xin-te-xing/"/>
+      <url>/2020/04/29/java8-xin-te-xing/</url>
+      
+        <content type="html"><![CDATA[<script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> Markdown </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Markdown </tag>
+            
+            <tag> Java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Java实例</title>
       <link href="/2020/04/27/java-shi-li/"/>
       <url>/2020/04/27/java-shi-li/</url>
@@ -20,9 +47,9 @@
       
         <tags>
             
-            <tag> Java </tag>
-            
             <tag> Markdown </tag>
+            
+            <tag> Java </tag>
             
         </tags>
       
@@ -174,9 +201,9 @@
       
         <tags>
             
-            <tag> Markdown </tag>
-            
             <tag> github </tag>
+            
+            <tag> Markdown </tag>
             
             <tag> hexo </tag>
             
@@ -203,36 +230,9 @@
       
         <tags>
             
-            <tag> Markdown </tag>
-            
             <tag> yilia </tag>
             
             <tag> github </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Java8-新特性</title>
-      <link href="/2020/04/02/java8-xin-te-xing/"/>
-      <url>/2020/04/02/java8-xin-te-xing/</url>
-      
-        <content type="html"><![CDATA[<script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
-      
-      
-      <categories>
-          
-          <category> Markdown </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Java </tag>
             
             <tag> Markdown </tag>
             
